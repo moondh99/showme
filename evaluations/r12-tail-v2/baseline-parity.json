@@ -1,0 +1,8 @@
+{
+  "baseline_commit": "3a51ee5",
+  "legacy_payloads_equal": true,
+  "plan_payload_sha256": "3478a330e379b30640a069a0f518baf5767ed0f093d9ebf5907d0f7b236e7eef",
+  "audit_payload_sha256": "d0a215be90790250786e5b05fee9018895af1054fb948709bb60f37483c9382e",
+  "actual_calls": 0,
+  "method": "Fixture HTTP interception; compares exact JSON payload objects for representative two-pass legacy request, not a paid quality evaluation."
+}

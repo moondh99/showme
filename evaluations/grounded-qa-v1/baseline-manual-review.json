@@ -1,0 +1,11 @@
+{
+  "reviewer": "Codex internal review, not independent human ground truth",
+  "reviewed_turns": 48,
+  "status_and_text_review": "No conflicting use rules or fabricated procedural facts found in the saved answer texts. Photo evidence remains model-generated observations; not independently verified mask/scene truth.",
+  "dataset_limitations": [
+    "Known source photos and manually approved reference rectangles reused.",
+    "Expected statuses and keyword checks authored by Codex before execution.",
+    "No new real event photographs, no human participant measurements."
+  ],
+  "case_manifest_sha256": "4a590c851538e87116ee402e3ca0639fed57eed25242fb77e226249350448e6e"
+}

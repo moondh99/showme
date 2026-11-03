@@ -1,0 +1,25 @@
+{
+  "baseline_commit": "7dfd18d",
+  "fixed_suite_hashes": {
+    "contexts.json": "9366ee39e9cde7913fe502325106ceedc6fb71de37974109e04c4dd7bfb8bca3",
+    "cases.json": "c5175190bfb99773943cffeb9149716282d64a35321c1ebc26177db4bfaa7860"
+  },
+  "cases": 28,
+  "variants": [
+    "full",
+    "adaptive"
+  ],
+  "max_model_calls": 140,
+  "workers": 2,
+  "retries": 0,
+  "cache": false,
+  "shared_draft": false,
+  "ordering": "seed 1207 case shuffle; alternating full/adaptive first order",
+  "quality_gate": "Adaptive must match all frozen intent/status/target/decision/quote checks with no new unsupported permissions or errors. Report both variants, do not discard failures.",
+  "performance_gate": "Fewer measured calls and lower observed median wall time, with actual browser verification. Small fixed regression set, not fresh independent evaluation.",
+  "prototype_failure": "Nested full-correction reply timed out during initial V03 canary; not applied. Use tiny verdict and at most one full repair call.",
+  "per_query_limits": {
+    "full": 2,
+    "adaptive": 3
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "suite": {
+    "baseline_commit": "953d414",
+    "created_before_implementation": true,
+    "cases": 28,
+    "splits": {
+      "discovery": 12,
+      "validation": 8,
+      "sealed": 8
+    },
+    "hashes": {
+      "contexts.json": "9366ee39e9cde7913fe502325106ceedc6fb71de37974109e04c4dd7bfb8bca3",
+      "cases.json": "c5175190bfb99773943cffeb9149716282d64a35321c1ebc26177db4bfaa7860"
+    },
+    "limits": "Prospectively frozen, agent authored; no independent human adjudication; same known staged image with new rule contexts. Sealed split is not to be used for selecting fixes."
+  },
+  "mode": "current",
+  "split": "sealed",
+  "commit": "953d414c3c4b0f7fe34297895a98e5152e7241dc",
+  "no_automatic_retries": true,
+  "workers": 2,
+  "source_hashes": {
+    "src/showme/reasoning.py": "1aa672bb9b897a574895afd788ba48338ff4f2660d5037b8b909df1c8f35b615",
+    "src/showme/vision.py": "039aaf5e2f10f16d9983b8e6eca5b32767ea38c7254320ff265f33e340780433",
+    "src/showme/models.py": "e37f8275a57a56d1b7f7070cb02a1cc91178d12063b96a565ce2d407362d53e3",
+    "src/showme/app.py": "93837a4fada28b047105aa80263688e791da39020adbb1a4e7dc9d0cf5e2056e",
+    "src/showme/answer_policy.py": "665b668e6c2bffe715a0dc17bc1a2319e0e63f0bb59b5f18e21f643ac3d7a003",
+    "scripts/evaluate_semantics.py": "3686ccf01d7a4cac7832dd895722c6df38f396c73fdaeca8bad41ae01c7b189a"
+  }
+}

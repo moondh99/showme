@@ -1,0 +1,8 @@
+Pillow>=10,<13
+python-dotenv>=1,<2
+requests>=2.32,<3
+fastapi>=0.118,<0.119
+uvicorn>=0.37,<0.38
+python-multipart>=0.0.20,<0.1
+pydantic>=2.11,<3
+meta-sam-parser==0.1.0

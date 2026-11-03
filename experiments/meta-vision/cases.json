@@ -1,0 +1,106 @@
+{
+  "label_source": "Assistant visual inspection before Meta API responses; approximate boxes, not human-validated benchmark labels.",
+  "cases": [
+    {
+      "id": "found-pen",
+      "image": "notepad.jpg",
+      "question": "메모지 위에 놓인 검은색 펜은 어디 있나요?",
+      "expected_status": "found",
+      "expected_box": [
+        508,
+        535,
+        882,
+        704
+      ],
+      "expected_answer": "메모지 위 검은 펜",
+      "note": "검은 펜은 참가자 서명용입니다."
+    },
+    {
+      "id": "found-screen",
+      "image": "reception.jpg",
+      "question": "벽에 설치된 큰 화면은 어디 있나요?",
+      "expected_status": "found",
+      "expected_box": [
+        267,
+        30,
+        638,
+        398
+      ],
+      "expected_answer": "접수대 뒤 벽의 큰 화면"
+    },
+    {
+      "id": "found-keyboard",
+      "image": "notepad.jpg",
+      "question": "노트북의 검은 키보드는 어디 있나요?",
+      "expected_status": "found",
+      "expected_box": [
+        0,
+        153,
+        689,
+        492
+      ],
+      "expected_answer": "노트북의 검은 키보드 영역"
+    },
+    {
+      "id": "found-green-pen",
+      "image": "desk.jpg",
+      "question": "은색과 초록색으로 된 볼펜은 어디 있나요?",
+      "expected_status": "found",
+      "expected_box": [
+        5,
+        270,
+        258,
+        677
+      ],
+      "expected_answer": "사진 왼쪽의 초록색 은색 볼펜"
+    },
+    {
+      "id": "found-highlighter",
+      "image": "desk.jpg",
+      "question": "오른쪽 위에 놓인 형광펜은 어디 있나요?",
+      "expected_status": "found",
+      "expected_box": [
+        839,
+        0,
+        999,
+        211
+      ],
+      "expected_answer": "오른쪽 위 연두색 형광펜"
+    },
+    {
+      "id": "absent-printer",
+      "image": "reception.jpg",
+      "question": "영수증 프린터는 어디 있나요?",
+      "expected_status": "not_found",
+      "expected_answer": "영수증 프린터는 보이지 않음"
+    },
+    {
+      "id": "absent-scissors",
+      "image": "notepad.jpg",
+      "question": "가위는 어디 있나요?",
+      "expected_status": "not_found",
+      "expected_answer": "가위는 보이지 않음"
+    },
+    {
+      "id": "absent-mug",
+      "image": "desk.jpg",
+      "question": "머그컵은 어디 있나요?",
+      "expected_status": "not_found",
+      "expected_answer": "머그컵은 보이지 않음"
+    },
+    {
+      "id": "ambiguous-green",
+      "image": "desk.jpg",
+      "question": "초록색 물건은 어디 있나요? 하나를 골라 알려주세요.",
+      "expected_status": "needs_clarification",
+      "expected_answer": "초록색 펜/형광펜/메모 등 여러 후보를 구분하는 질문"
+    },
+    {
+      "id": "ambiguous-this",
+      "image": "notepad.jpg",
+      "question": "이건 어디에 놓으면 되나요?",
+      "expected_status": "needs_clarification",
+      "expected_answer": "무엇을 가리키는지 확인하며 놓을 위치를 지어내지 않음"
+    }
+  ]
+}

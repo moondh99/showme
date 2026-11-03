@@ -1,0 +1,29 @@
+{
+  "attempted_calls": 48,
+  "planned_calls": 48,
+  "valid_responses": 48,
+  "errors": 0,
+  "status_matches": 48,
+  "all_automatic_checks_pass": 48,
+  "inappropriate_answers": 0,
+  "geometry_passes": 12,
+  "geometry_count": 12,
+  "latency_p50_seconds": 4.689,
+  "latency_p95_seconds": 7.273,
+  "usage": {
+    "prompt_tokens": 145307,
+    "completion_tokens": 47545,
+    "total_tokens": 192852
+  },
+  "by_origin": {
+    "real_cc0": {
+      "valid_responses": 20,
+      "status_matches": 20
+    },
+    "synthetic": {
+      "valid_responses": 28,
+      "status_matches": 28
+    }
+  },
+  "limitation": "Agent-authored expectations on known photographs; not independent human evaluation, unseen-photo generalization, or user impact."
+}

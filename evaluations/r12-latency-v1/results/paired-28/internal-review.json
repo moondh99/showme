@@ -1,0 +1,95 @@
+{
+  "kind": "Agent internal regression review, not external adjudication",
+  "groups": {
+    "simple_visual": {
+      "full": {
+        "cases": 5,
+        "p50_seconds": 18.745,
+        "mean_seconds": 20.606
+      },
+      "adaptive": {
+        "cases": 5,
+        "p50_seconds": 9.385,
+        "mean_seconds": 9.117
+      }
+    },
+    "retained_review": {
+      "full": {
+        "cases": 23,
+        "p50_seconds": 24.401,
+        "mean_seconds": 24.733
+      },
+      "adaptive": {
+        "cases": 23,
+        "p50_seconds": 21.86,
+        "mean_seconds": 22.79
+      }
+    },
+    "procedure": {
+      "full": {
+        "cases": 20,
+        "p50_seconds": 23.815,
+        "mean_seconds": 24.956
+      },
+      "adaptive": {
+        "cases": 20,
+        "p50_seconds": 21.282,
+        "mean_seconds": 22.601
+      }
+    }
+  },
+  "components": {
+    "full": {
+      "first_pass_p50": 11.05,
+      "review_pass_p50": 11.549,
+      "max_seconds": 38.623
+    },
+    "adaptive": {
+      "first_pass_p50": 12.136,
+      "review_pass_p50": 8.579,
+      "max_seconds": 38.255
+    }
+  },
+  "quality_gate_pass": true,
+  "literal_condition_quotes": true,
+  "manual_review": {
+    "operating_noun_visual": [
+      "D01",
+      "V01",
+      "H01"
+    ],
+    "AND": [
+      "D07",
+      "D08",
+      "H03"
+    ],
+    "OR": [
+      "V03",
+      "V04",
+      "V05"
+    ],
+    "missing_fact": [
+      "D10",
+      "H05"
+    ],
+    "cross_field": [
+      "D09",
+      "V07",
+      "H04"
+    ],
+    "target_prohibition": [
+      "D06",
+      "D11",
+      "V06",
+      "H06",
+      "H07"
+    ],
+    "missing_rule": [
+      "D12",
+      "V08",
+      "H08"
+    ]
+  },
+  "repair_path": "Not triggered in these 28 adaptive runs; max-three repair and failure paths covered by mocked unit tests.",
+  "limitations": "Expected labels and quote groups are coarse checks; prohibition condition state labels are not formal atomic truth values. No newly blind or new-photo evaluation."
+}

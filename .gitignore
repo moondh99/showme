@@ -1,0 +1,28 @@
+# Local credentials and environment settings
+.env
+.env.*
+!.env.example
+
+# Dependencies and build outputs
+node_modules/
+.next/
+dist/
+build/
+coverage/
+.vercel/
+
+# Local runtime files
+.DS_Store
+*.log
+__pycache__/
+.venv/
+state/
+
+# Raw experiment inputs and responses stay local by default
+experiments/meta-vision/inputs/*
+!experiments/meta-vision/inputs/.gitkeep
+experiments/meta-vision/results/*
+!experiments/meta-vision/results/.gitkeep
+
+# Local design-review snapshots can include workstation paths.
+.impeccable/

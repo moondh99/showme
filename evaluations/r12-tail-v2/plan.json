@@ -1,0 +1,60 @@
+{
+  "baseline_commit": "3a51ee5",
+  "goal": "Reduce the selected-target 47.453s plan/audit tail while preserving R10/R11 frozen quality",
+  "diagnostic_saved_trace": {
+    "plan_seconds": 29.573,
+    "audit_seconds": 17.88,
+    "plan_reasoning_tokens": 4749,
+    "audit_reasoning_tokens": 2708,
+    "max_target_seconds": 30
+  },
+  "fixed_suite_hashes": {
+    "contexts.json": "9366ee39e9cde7913fe502325106ceedc6fb71de37974109e04c4dd7bfb8bca3",
+    "cases.json": "c5175190bfb99773943cffeb9149716282d64a35321c1ebc26177db4bfaa7860"
+  },
+  "canary": {
+    "pipelines": 6,
+    "workers": 1,
+    "max_calls": 18,
+    "knobs": "same selected question at legacy, plan_low, audit_low, bounded; V04 OR and H05 unknown fact at bounded"
+  },
+  "paired": {
+    "fixed_cases": 28,
+    "selected_target_repeats_per_variant": 3,
+    "pipelines": 62,
+    "workers": 2,
+    "max_calls": 155,
+    "seed": 523,
+    "order": "shuffle fixed 28, alternate legacy/corrective first 14/14; append three selected repetitions with alternating order"
+  },
+  "quality_gate": "No new incorrect intent/status/target/decision/required quotations, no unsafe permissions or errors on fixed 28 and selected repetitions; same semantic prompts, schema, rules, image and fail-closed checks",
+  "latency_gate": "Lower observed p50 and P95 vs fresh R12 adaptive legacy-depth comparison; selected-target repetitions under 30s each and actual browser check; include failures, repairs and slower cases",
+  "retries": 0,
+  "shared_draft": false,
+  "response_cache": false,
+  "scope": "Observed small regression sample, not a new blind set or latency SLA; HTTP wait cannot distinguish network, queue, prefill and model decode individually",
+  "sources": [
+    "https://dev.meta.ai/docs/reasoning",
+    "https://dev.meta.ai/docs/protocols/chat-completions"
+  ],
+  "changes": "Explicit low effort for initial semantic plan and full independent corrective audit; fresh plain visual remains one call. Full corrective second pass replaces compact verdict plus possible third repair; public max two calls, no hard token cap, same prompts/schema/rules/photo.",
+  "rejected_canary": {
+    "folder": "canary-20261102T131706873479Z",
+    "actual_calls": 13,
+    "selected_bounded_seconds": 39.226,
+    "cause": "Third full repair added 11.926s; final answer correct, latency gate failed"
+  },
+  "corrective_canary": {
+    "pipelines": 3,
+    "max_calls": 6,
+    "workers": 1,
+    "profiles": [
+      "corrective"
+    ],
+    "cases": [
+      "SLOW",
+      "V04",
+      "H05"
+    ]
+  }
+}

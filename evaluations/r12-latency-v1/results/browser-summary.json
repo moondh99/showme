@@ -1,0 +1,242 @@
+{
+  "questions": [
+    {
+      "question": "노란 쟁반의 외형만 묘사해 줄래요?",
+      "intent": "appearance",
+      "answer": {
+        "status": "answered",
+        "answer": "사진 오른쪽에 노란색 직사각형 쟁반이 놓여 있고 안에 노란 끈에 검은 버클과 투명 케이스가 달린 흰색 표찰 5개가 일렬로 정리되어 있다.",
+        "clarification_options": [],
+        "highlights": [
+          {
+            "label": "노란 쟁반",
+            "box": [
+              535,
+              152,
+              941,
+              867
+            ],
+            "origin": "model"
+          }
+        ],
+        "evidence": [
+          {
+            "source": "photo",
+            "detail": "사진 오른쪽에 노란 쟁반 안에 노란 끈 명찰 5개가 일렬로 들어 있음"
+          }
+        ],
+        "approved_context": [],
+        "assessment": {
+          "decision": "visual",
+          "target": "노란 쟁반",
+          "conditions": []
+        }
+      },
+      "model_calls": 1,
+      "audit_strategy": "plain_visual",
+      "elapsed_model_seconds": 7.845,
+      "passes": [
+        {
+          "model": "muse-spark-1.3",
+          "elapsed_seconds": 7.845,
+          "usage": {
+            "completion_tokens": 948,
+            "prompt_tokens": 6478,
+            "total_tokens": 7426,
+            "completion_tokens_details": {
+              "reasoning_tokens": 768
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 4337
+            }
+          }
+        }
+      ],
+      "selection_used": false
+    },
+    {
+      "question": "교육은 안 받았지만 책임자가 같이 왔어요. 노란 건 발급 가능한 편인가요?",
+      "intent": "procedure",
+      "answer": {
+        "status": "answered",
+        "answer": "노란 트레이의 표는 공동 장비 대여용입니다.\n\n장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다.",
+        "clarification_options": [],
+        "highlights": [],
+        "evidence": [
+          {
+            "source": "instruction",
+            "detail": "노란 트레이의 표는 공동 장비 대여용입니다."
+          },
+          {
+            "source": "completion_check",
+            "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다."
+          }
+        ],
+        "approved_context": [
+          {
+            "source": "instruction",
+            "text": "파란 트레이의 표는 개인 물품 보관용입니다. 노란 트레이의 표는 공동 장비 대여용입니다. 보관표로 장비를 대여할 수 없습니다."
+          },
+          {
+            "source": "completion_check",
+            "text": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다."
+          }
+        ],
+        "assessment": {
+          "decision": "allowed",
+          "target": "노란 트레이의 장비 대여표",
+          "conditions": [
+            {
+              "source": "completion_check",
+              "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다.",
+              "state": "met"
+            }
+          ]
+        }
+      },
+      "model_calls": 2,
+      "audit_strategy": "compact",
+      "elapsed_model_seconds": 18.714,
+      "passes": [
+        {
+          "model": "muse-spark-1.3",
+          "elapsed_seconds": 10.462,
+          "usage": {
+            "completion_tokens": 1620,
+            "prompt_tokens": 6486,
+            "total_tokens": 8106,
+            "completion_tokens_details": {
+              "reasoning_tokens": 1420
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 6385
+            }
+          }
+        },
+        {
+          "model": "muse-spark-1.3",
+          "elapsed_seconds": 8.252,
+          "usage": {
+            "completion_tokens": 1048,
+            "prompt_tokens": 3450,
+            "total_tokens": 4498,
+            "completion_tokens_details": {
+              "reasoning_tokens": 1027
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ],
+      "selection_used": false
+    },
+    {
+      "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+      "intent": "procedure",
+      "answer": {
+        "status": "answered",
+        "answer": "파란 트레이의 표는 개인 물품 보관용입니다.\n\n보관표로 장비를 대여할 수 없습니다.",
+        "clarification_options": [],
+        "highlights": [],
+        "evidence": [
+          {
+            "source": "instruction",
+            "detail": "파란 트레이의 표는 개인 물품 보관용입니다."
+          },
+          {
+            "source": "instruction",
+            "detail": "보관표로 장비를 대여할 수 없습니다."
+          }
+        ],
+        "approved_context": [
+          {
+            "source": "instruction",
+            "text": "파란 트레이의 표는 개인 물품 보관용입니다. 노란 트레이의 표는 공동 장비 대여용입니다. 보관표로 장비를 대여할 수 없습니다."
+          },
+          {
+            "source": "completion_check",
+            "text": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다."
+          }
+        ],
+        "assessment": {
+          "decision": "blocked",
+          "target": "파란 트레이의 보관표",
+          "conditions": [
+            {
+              "source": "instruction",
+              "detail": "파란 트레이의 표는 개인 물품 보관용입니다.",
+              "state": "not_met"
+            },
+            {
+              "source": "instruction",
+              "detail": "보관표로 장비를 대여할 수 없습니다.",
+              "state": "not_met"
+            }
+          ]
+        }
+      },
+      "model_calls": 2,
+      "audit_strategy": "compact",
+      "elapsed_model_seconds": 47.453,
+      "passes": [
+        {
+          "model": "muse-spark-1.3",
+          "elapsed_seconds": 29.573,
+          "usage": {
+            "completion_tokens": 4959,
+            "prompt_tokens": 6503,
+            "total_tokens": 11462,
+            "completion_tokens_details": {
+              "reasoning_tokens": 4749
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "muse-spark-1.3",
+          "elapsed_seconds": 17.88,
+          "usage": {
+            "completion_tokens": 2729,
+            "prompt_tokens": 3476,
+            "total_tokens": 6205,
+            "completion_tokens_details": {
+              "reasoning_tokens": 2708
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ],
+      "selection_used": true
+    }
+  ],
+  "sam": {
+    "calls": 1,
+    "point": {
+      "x": 240,
+      "y": 641
+    },
+    "box": [
+      139,
+      529,
+      344,
+      735
+    ],
+    "seconds": 3.183
+  },
+  "approved_snapshots_unchanged": 7,
+  "browser_console_errors": [],
+  "source_hashes": {
+    "src/showme/reasoning.py": "1ce51b07915a0e5183daf91589746f84fdb5e7f3b7615cfaa59d6fa78bb58d1e",
+    "src/showme/vision.py": "039aaf5e2f10f16d9983b8e6eca5b32767ea38c7254320ff265f33e340780433",
+    "src/showme/models.py": "e37f8275a57a56d1b7f7070cb02a1cc91178d12063b96a565ce2d407362d53e3",
+    "src/showme/answer_policy.py": "665b668e6c2bffe715a0dc17bc1a2319e0e63f0bb59b5f18e21f643ac3d7a003",
+    "src/showme/app.py": "93837a4fada28b047105aa80263688e791da39020adbb1a4e7dc9d0cf5e2056e",
+    "scripts/benchmark_latency.py": "4d1596bd9394e8e8227dc7fd46381efc46a805e35012cb92b023e1b120bf1924"
+  },
+  "limits": "Model pass elapsed times exclude browser network/paint and SAM; 3 product requests are smoke verification, not a performance comparison."
+}

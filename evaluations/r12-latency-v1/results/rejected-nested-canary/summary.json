@@ -1,0 +1,107 @@
+{
+  "full": {
+    "cases": 1,
+    "errors": 0,
+    "model_calls": 2,
+    "p50_seconds": 22.678,
+    "p95_seconds": 22.678,
+    "mean_seconds": 22.678,
+    "checks": {
+      "intent_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "status_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "decision_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "target_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "quote_coverage": {
+        "pass": 1,
+        "scored": 1
+      },
+      "all_checks_pass": {
+        "pass": 1,
+        "scored": 1
+      }
+    },
+    "unsafe_permissions": 0,
+    "strategies": {
+      "full": 1,
+      "compact": 0,
+      "plain_visual": 0
+    },
+    "tokens": {
+      "prompt_tokens": 13281,
+      "completion_tokens": 3455,
+      "total_tokens": 16736
+    }
+  },
+  "adaptive": {
+    "cases": 1,
+    "errors": 1,
+    "model_calls": 2,
+    "p50_seconds": 96.66,
+    "p95_seconds": 96.66,
+    "mean_seconds": 96.66,
+    "checks": {
+      "intent_match": {
+        "pass": 0,
+        "scored": 0
+      },
+      "status_match": {
+        "pass": 0,
+        "scored": 0
+      },
+      "decision_match": {
+        "pass": 0,
+        "scored": 0
+      },
+      "target_match": {
+        "pass": 0,
+        "scored": 0
+      },
+      "quote_coverage": {
+        "pass": 0,
+        "scored": 0
+      },
+      "all_checks_pass": {
+        "pass": 0,
+        "scored": 0
+      }
+    },
+    "unsafe_permissions": 0,
+    "strategies": {
+      "full": 0,
+      "compact": 0,
+      "plain_visual": 0
+    },
+    "tokens": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "paired": {
+    "pairs": 1,
+    "adaptive_faster": 0,
+    "median_saved_seconds": -73.982,
+    "details": [
+      {
+        "id": "V03",
+        "full_seconds": 22.678,
+        "adaptive_seconds": 96.66,
+        "saved_seconds": -73.982
+      }
+    ]
+  },
+  "call_reduction_percent": 0.0,
+  "p50_reduction_percent": -326.23
+}

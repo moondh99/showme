@@ -1,0 +1,540 @@
+{
+  "all": {
+    "legacy": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 38.363,
+      "p95_seconds": 38.363,
+      "max_seconds": 38.363,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 16791,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 16.943,
+          "p95_seconds": 16.943,
+          "reasoning_tokens": 2999,
+          "visible_tokens": 292,
+          "http_seconds": 16.942,
+          "local_seconds": 0.001362
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 21.409,
+          "p95_seconds": 21.409,
+          "reasoning_tokens": 3417,
+          "visible_tokens": 21,
+          "http_seconds": 21.409,
+          "local_seconds": 0.000129
+        }
+      }
+    },
+    "plan_low": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 35.614,
+      "p95_seconds": 35.614,
+      "max_seconds": 35.614,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 16188,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 14.14,
+          "p95_seconds": 14.14,
+          "reasoning_tokens": 1327,
+          "visible_tokens": 283,
+          "http_seconds": 14.14,
+          "local_seconds": 0.000381
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 21.461,
+          "p95_seconds": 21.461,
+          "reasoning_tokens": 4504,
+          "visible_tokens": 21,
+          "http_seconds": 21.461,
+          "local_seconds": 0.000119
+        }
+      }
+    },
+    "audit_low": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 22.536,
+      "p95_seconds": 22.536,
+      "max_seconds": 22.536,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 14128,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 18.045,
+          "p95_seconds": 18.045,
+          "reasoning_tokens": 3178,
+          "visible_tokens": 305,
+          "http_seconds": 18.045,
+          "local_seconds": 8.7e-05
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 4.482,
+          "p95_seconds": 4.482,
+          "reasoning_tokens": 545,
+          "visible_tokens": 25,
+          "http_seconds": 4.482,
+          "local_seconds": 4e-05
+        }
+      }
+    },
+    "bounded": {
+      "cases": 3,
+      "errors": 0,
+      "p50_seconds": 12.937,
+      "p95_seconds": 39.226,
+      "max_seconds": 39.226,
+      "model_calls": 7,
+      "checks": {
+        "intent_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "status_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "target_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "decision_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "quote_coverage": {
+          "pass": 3,
+          "scored": 3
+        },
+        "all_checks_pass": {
+          "pass": 3,
+          "scored": 3
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 1,
+      "total_tokens": 45916,
+      "phases": {
+        "plan": {
+          "count": 3,
+          "p50_seconds": 6.548,
+          "p95_seconds": 16.509,
+          "reasoning_tokens": 3558,
+          "visible_tokens": 673,
+          "http_seconds": 27.917,
+          "local_seconds": 0.000741
+        },
+        "audit": {
+          "count": 3,
+          "p50_seconds": 6.38,
+          "p95_seconds": 10.778,
+          "reasoning_tokens": 2786,
+          "visible_tokens": 73,
+          "http_seconds": 21.223,
+          "local_seconds": 0.000419
+        },
+        "repair": {
+          "count": 1,
+          "p50_seconds": 11.926,
+          "p95_seconds": 11.926,
+          "reasoning_tokens": 1855,
+          "visible_tokens": 209,
+          "http_seconds": 11.926,
+          "local_seconds": 0.000337
+        }
+      }
+    }
+  },
+  "fixed_28": {
+    "bounded": {
+      "cases": 2,
+      "errors": 0,
+      "p50_seconds": 10.938,
+      "p95_seconds": 12.937,
+      "max_seconds": 12.937,
+      "model_calls": 4,
+      "checks": {
+        "intent_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "status_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "target_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "decision_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "quote_coverage": {
+          "pass": 2,
+          "scored": 2
+        },
+        "all_checks_pass": {
+          "pass": 2,
+          "scored": 2
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 23008,
+      "phases": {
+        "plan": {
+          "count": 2,
+          "p50_seconds": 5.704,
+          "p95_seconds": 6.548,
+          "reasoning_tokens": 1462,
+          "visible_tokens": 451,
+          "http_seconds": 11.408,
+          "local_seconds": 0.000433
+        },
+        "audit": {
+          "count": 2,
+          "p50_seconds": 5.223,
+          "p95_seconds": 6.38,
+          "reasoning_tokens": 1105,
+          "visible_tokens": 46,
+          "http_seconds": 10.445,
+          "local_seconds": 9.9e-05
+        }
+      }
+    }
+  },
+  "selected_repetitions": {
+    "legacy": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 38.363,
+      "p95_seconds": 38.363,
+      "max_seconds": 38.363,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 16791,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 16.943,
+          "p95_seconds": 16.943,
+          "reasoning_tokens": 2999,
+          "visible_tokens": 292,
+          "http_seconds": 16.942,
+          "local_seconds": 0.001362
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 21.409,
+          "p95_seconds": 21.409,
+          "reasoning_tokens": 3417,
+          "visible_tokens": 21,
+          "http_seconds": 21.409,
+          "local_seconds": 0.000129
+        }
+      }
+    },
+    "plan_low": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 35.614,
+      "p95_seconds": 35.614,
+      "max_seconds": 35.614,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 16188,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 14.14,
+          "p95_seconds": 14.14,
+          "reasoning_tokens": 1327,
+          "visible_tokens": 283,
+          "http_seconds": 14.14,
+          "local_seconds": 0.000381
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 21.461,
+          "p95_seconds": 21.461,
+          "reasoning_tokens": 4504,
+          "visible_tokens": 21,
+          "http_seconds": 21.461,
+          "local_seconds": 0.000119
+        }
+      }
+    },
+    "audit_low": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 22.536,
+      "p95_seconds": 22.536,
+      "max_seconds": 22.536,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 0,
+      "total_tokens": 14128,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 18.045,
+          "p95_seconds": 18.045,
+          "reasoning_tokens": 3178,
+          "visible_tokens": 305,
+          "http_seconds": 18.045,
+          "local_seconds": 8.7e-05
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 4.482,
+          "p95_seconds": 4.482,
+          "reasoning_tokens": 545,
+          "visible_tokens": 25,
+          "http_seconds": 4.482,
+          "local_seconds": 4e-05
+        }
+      }
+    },
+    "bounded": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 39.226,
+      "p95_seconds": 39.226,
+      "max_seconds": 39.226,
+      "model_calls": 3,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "repairs": 1,
+      "total_tokens": 22908,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 16.509,
+          "p95_seconds": 16.509,
+          "reasoning_tokens": 2096,
+          "visible_tokens": 222,
+          "http_seconds": 16.509,
+          "local_seconds": 0.000308
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 10.778,
+          "p95_seconds": 10.778,
+          "reasoning_tokens": 1681,
+          "visible_tokens": 27,
+          "http_seconds": 10.778,
+          "local_seconds": 0.00032
+        },
+        "repair": {
+          "count": 1,
+          "p50_seconds": 11.926,
+          "p95_seconds": 11.926,
+          "reasoning_tokens": 1855,
+          "visible_tokens": 209,
+          "http_seconds": 11.926,
+          "local_seconds": 0.000337
+        }
+      }
+    }
+  },
+  "paired_details": []
+}

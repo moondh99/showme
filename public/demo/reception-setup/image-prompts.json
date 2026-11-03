@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "kind": "AI-generated staged demo images, not real event photographs",
+  "images": [
+    {
+      "filename": "04-overview.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: synthetic demonstration photograph for a four-step event check-in desk preparation guide. Create ONE realistic documentary photograph, NOT a collage, showing a small volunteer-run indoor event registration desk with no people, no logos, no personal data, no watermark. Wide horizontal composition, camera looking down at about 40 degrees so the whole light oak rectangular table is visible, plain softly lit off-white conference room behind. All objects clear, natural and physically plausible. Consistent layout that later close-up photographs can preserve: at REAR LEFT of the table one upright white acrylic sign with only the exact large black text 'CHECK-IN'; along MIDDLE CENTER of table two shallow open plastic badge trays side by side, BLUE tray on the LEFT holding six stacked blank white name badge cards with blue lanyards, YELLOW tray on the RIGHT holding six stacked blank white name badge cards with yellow lanyards. Keep a visible empty hand-width gap between the two trays. At FRONT RIGHT one gray clipboard with a blank white paper sheet with simple faint unfilled horizontal rows, and two ordinary ballpoint pens laid separately beside it: one solid BLACK pen and one solid BLUE pen, easy to distinguish and fully visible. Pens have NO brand names or printed writing. Front left edge of the table is empty as a visitor standing space. No extra objects, no laptop, no cups, no phone, no fabric lanyards tangled between trays, no business branding or real names. Photo should be practical and candid, sharp enough for a vision model to locate the sign, both trays, both pens and clipboard. Do not add any image annotations, boxes, numbers, or labels except the printed CHECK-IN on the sign. Landscape 3:2 composition.",
+      "generated_source_filename": "exec-145dd58d-2b29-4649-99c0-c95261784449.png"
+    },
+    {
+      "filename": "01-sign.png",
+      "prompt": "Use case: precise-object-edit. This is a synthetic demonstration photograph for the first step of an event check-in desk guide. Use the supplied reference as the same physical scene. Make a new close-up photograph from a slightly higher angle of the rear LEFT area of this EXACT light oak registration table: the upright white acrylic CHECK-IN sign is the clear main subject and fills the left-center of the photograph. The exact printed text CHECK-IN must remain fully readable. Part of the SAME blue badge tray may be visible on the right, with the same blue lanyards and blank badges. Preserve all materials, office chairs, room, lighting, and real-world geometry of the reference. Reframe the camera without moving any object. Do not add people, hands, logos, new objects, annotations, numbers, watermarks, extra text, or other signs. Do not put pens in this close-up. One horizontal 3:2 candid documentary-style photograph, sharp practical instructional reference image, no collage.",
+      "reference": "04-overview.png",
+      "generated_source_filename": "exec-7e5a2258-ddae-484e-81b8-42da20d8df89.png"
+    },
+    {
+      "filename": "02-signing-tools.png",
+      "prompt": "Use case: precise-object-edit. This is a synthetic demonstration photograph for the signing-tools step of an event check-in desk guide. Reframe the supplied reference as a close-up photograph looking down at the FRONT RIGHT part of the SAME light oak table. Preserve the exact objects and layout: one gray clipboard with a blank white paper with faint unfilled horizontal rows occupies the left-center of the photograph; immediately beside it on its RIGHT are exactly TWO separate ballpoint pens, fully visible and not touching, pointing with their writing tips toward the front edge of the table: a solid BLACK pen closer to the clipboard (LEFT of the pair), and a solid BLUE pen farther right (RIGHT of the pair). The two pen colors must be unmistakable. A small unobtrusive corner of the same yellow badge tray can appear in the upper left background. Preserve surface, lighting, photographic style and spatial consistency with reference. Change only camera framing, do not move objects. No names, filled forms, added text, people, hands, logos, boxes, annotations, watermarks, or extra objects. One horizontal 3:2 practical close-up photograph, sharp and natural, no collage.",
+      "reference": "04-overview.png",
+      "generated_source_filename": "exec-3e66b216-ec72-498d-ad2b-a913501b3be8.png"
+    },
+    {
+      "filename": "03-badge-trays.png",
+      "prompt": "Use case: precise-object-edit. Synthetic demonstration photograph for separating badges in an event check-in desk guide. Reframe the supplied reference as a slightly overhead close-up of the SAME two shallow plastic badge trays on the SAME light oak table. BLUE tray on the LEFT with blank white name badge holders and blue lanyards; YELLOW tray on the RIGHT with blank white name badge holders and yellow lanyards. Both trays fully visible including their outer edges; a clear hand-width empty gap of table surface between them. Preserve the two exact trays, badge style, stacks and colors from the reference, plus lighting and surface. Camera framing changes only; do not move, swap or add objects. Main subjects fill the frame, no sign or clipboard required in this close-up. No names, numbers, printed words, people, hands, logos, labels, boxes, annotations, or watermarks. One horizontal 3:2 candid practical photograph with natural shadows and clear boundaries, no collage.",
+      "reference": "04-overview.png",
+      "generated_source_filename": "exec-efd64e72-90fc-437b-a032-1a6c8041976d.png"
+    }
+  ]
+}

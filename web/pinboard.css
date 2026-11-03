@@ -1,0 +1,206 @@
+@font-face{font-family:"Pinboard Space";font-style:normal;font-weight:600;font-display:swap;src:url('/static/fonts/space-grotesk-600.ttf') format('truetype')}
+
+/* Pinboard is scoped to published learning pages; the author workspace keeps its controls. */
+body.pinboard-page{
+  --bg:#f0f0ec;--paper:#fffefa;--ink:#30372e;--muted:#60685b;--line:#d9ddd4;
+  --blue:#1859dd;--pale:#eaf0ff;--green:#28634c;--pin-note:#f9edb7;--pin-note-ink:#423e2d;
+  background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;
+}
+.pinboard-page ::selection{background:#d4e1ff;color:#203b70}
+.pinboard-page input,.pinboard-page textarea{caret-color:var(--blue)}
+.pinboard-page .masthead{height:72px;padding:0 max(24px,calc((100vw - 1232px)/2));background:var(--paper)}
+.pinboard-page .brand{font:600 25px/1.2 "Pinboard Space",sans-serif;letter-spacing:-.04em;gap:10px}
+.pinboard-page .brand-sub{font-family:"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;font-size:12px;letter-spacing:0;margin-left:12px}
+.pinboard-page .brand>.pinboard-icon{color:var(--blue);width:24px;height:24px}
+.pinboard-icon{width:18px;height:18px;display:inline-block;vertical-align:middle;flex-shrink:0}
+.pinboard-page .btn{font-size:14px;font-weight:500;border-radius:8px}
+.pinboard-page .btn:hover:not(:disabled){background:#e9ece4;border-color:#b8c1af}
+.pinboard-page .btn.primary{background:var(--blue);color:white;border-color:var(--blue)}
+.pinboard-page .btn.primary:hover:not(:disabled){background:#1649b2}
+.pinboard-page .btn[aria-pressed=true]{border-color:#aebbad}
+.pinboard-page .btn:focus-visible,.pinboard-page button:focus-visible,.pinboard-page a:focus-visible,
+.pinboard-page select:focus-visible,.pinboard-page summary:focus-visible,.pinboard-page input:focus-visible,.pinboard-page textarea:focus-visible{
+  outline:3px solid #648bea;outline-offset:4px;
+}
+.pinboard-page .learner-workbench{max-width:1280px;margin:26px auto;padding:0 24px 60px}
+.pinboard-page .learn-header{align-items:center;gap:20px}
+.pinboard-page .learn-header h1{word-break:keep-all;overflow-wrap:anywhere;font-size:25px;font-weight:650;letter-spacing:-.03em}
+.pinboard-guide-subtitle{font-size:13px;color:var(--muted);margin-top:6px}
+.pinboard-page .learn-header>.status-pill{display:inline-flex;align-items:center;gap:6px;background:transparent;white-space:nowrap;font-size:12px;margin:0;padding:0}
+.pinboard-page .demo-origin{display:inline-block;background:transparent;border-radius:0;color:#72591b;padding:0;margin:12px 0 2px;font-size:12px}
+.pinboard-page .guide-context{margin:5px 0 15px;max-width:900px}
+.pinboard-page .guide-context summary{font-size:12px;min-height:40px}
+.pinboard-board{border:1px solid var(--line);border-radius:16px;background:var(--paper);overflow:clip}
+.pinboard-board-bar{padding:18px 26px;display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,390px);gap:22px;align-items:center;border-bottom:1px solid var(--line)}
+.pinboard-board-bar .current-step-title{font-size:21px;line-height:1.5;font-weight:600;letter-spacing:-.025em;margin:0;word-break:keep-all}
+.pinboard-page .pinboard-board-bar .learn-nav{margin:0;padding:0;border:0;align-items:end;gap:9px;flex-wrap:nowrap;min-width:0}
+.pinboard-page .learn-nav .btn{padding:9px;min-width:44px}
+.pinboard-page .learn-nav label>span{font-size:11px;margin-bottom:4px}
+.pinboard-page .learn-nav select{font-size:13px;border-color:var(--line);height:44px}
+.pinboard-canvas{
+  position:relative;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);grid-template-areas:"photo notes" "question notes" "related notes";align-items:start;gap:20px 38px;padding:28px;
+  background-color:var(--bg);background-image:radial-gradient(#d6dbd0 .85px,transparent .85px);background-size:20px 20px;
+}
+.pinboard-connector{position:absolute;inset:0;width:100%;height:100%;color:var(--blue);pointer-events:none;z-index:0;overflow:visible}
+.pinboard-connector path{stroke:currentColor;stroke-width:1.6;fill:none;vector-effect:non-scaling-stroke}
+.pinboard-connector circle{fill:currentColor}
+.pinboard-connector[hidden]{display:none}
+.pinboard-visual{grid-area:photo;position:relative;z-index:1;min-width:0}
+.pinboard-page .selection-controls{margin-top:0;align-items:center;gap:8px;flex-wrap:wrap}
+.pinboard-page .selection-controls .btn{font-size:13px;min-height:44px;padding:9px 12px}
+.pinboard-page .read-approved{font-size:12px;min-height:44px}
+.pinboard-page .selection-help{font-size:12px;line-height:1.8;margin:9px 0 15px}
+.pinboard-page .selection-status,.pinboard-page .selection-error{margin-bottom:15px;font-size:13px}
+.pinboard-photo-card{background:var(--paper);padding:12px;position:relative}
+.pinboard-page .pinboard-photo-card .photo-frame{border-radius:2px;outline:0;isolation:isolate}
+.pinboard-page .pinboard-photo-card .photo-frame.point-selecting{outline:3px solid var(--blue);outline-offset:3px}
+.pinboard-page .photo-frame.point-selecting:focus-visible{outline:4px solid #648bea;outline-offset:5px}
+.pinboard-photo-caption{display:flex;gap:8px;align-items:flex-start;padding-top:12px;font-size:13px;line-height:1.7;color:var(--ink)}
+.pinboard-photo-caption svg{margin-top:2px}
+.pinboard-photo-card .box-legend{font-size:11px;margin-top:7px;line-height:1.8}
+.pinboard-photo-card .box-legend{display:flex;flex-wrap:wrap;gap:6px}
+.pinboard-target{display:inline-flex;align-items:center;gap:5px;min-height:44px;padding:8px 10px;font:inherit;font-size:12px;color:var(--blue);background:var(--pale);border:1px solid #cbd8f3;border-radius:6px;text-align:left}
+.pinboard-target:hover:not(:disabled){background:#dce7ff}
+.pinboard-target .pinboard-icon{width:14px;height:14px}
+.pinboard-marker[hidden]{display:none}
+.pinboard-photo-card .credit{font-size:11px;margin-top:9px;line-height:1.75}
+.pinboard-marker{position:absolute;z-index:2;display:grid;place-items:center;min-width:44px;width:44px;height:44px;padding:0;transform:translate(-50%,-50%);border:0;border-radius:50%;background:var(--paper);color:var(--blue);box-shadow:0 4px 10px #30372e20;line-height:1}
+.pinboard-marker:hover:not(:disabled){background:var(--pale)}
+.pinboard-marker .pinboard-icon{width:19px;height:19px}
+.pinboard-page .pick-point{box-shadow:0 0 0 2px var(--blue);z-index:3}
+.pinboard-related{grid-area:related;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-left:12px}
+.pinboard-step-card{display:flex;align-items:center;gap:11px;min-width:0;text-align:left;background:var(--paper);color:var(--ink);border:0;padding:10px;transform:rotate(.45deg)}
+.pinboard-step-card:nth-child(2){transform:rotate(-.6deg)}
+.pinboard-step-card:only-child{grid-column:1/-1;max-width:440px}
+.pinboard-step-card:hover{background:#e8ecdf}
+.pinboard-step-card img{display:block;flex-shrink:0;width:76px;height:57px;object-fit:cover}
+.pinboard-step-card>span{min-width:0}
+.pinboard-step-card small{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-bottom:4px}
+.pinboard-step-card strong{font-size:12px;line-height:1.6;font-weight:600;display:block;word-break:keep-all}
+.pinboard-step-card>.pinboard-icon{margin-left:auto;width:15px;height:15px}
+.pinboard-notes{grid-area:notes;position:relative;z-index:1;display:flex;flex-direction:column;gap:30px;min-width:0;padding:24px 5px 0}
+.pinboard-page .pinboard-note{margin:0;padding:24px;background:var(--pin-note);color:var(--pin-note-ink);border:0;border-radius:2px;transform:rotate(.65deg);scroll-margin-top:24px;overflow-wrap:anywhere}
+.pinboard-page .pinboard-note>h3{justify-content:flex-start;gap:8px;font-size:14px;font-weight:600;color:#65552e;display:flex;align-items:center}
+.pinboard-page .pinboard-note .instruction{font-size:16px;line-height:1.85;margin:18px 0;color:var(--pin-note-ink)}
+.pinboard-page .pinboard-note .check-card{border:0;border-top:1px solid #d4c790;border-radius:0;background:transparent;padding:18px 0 0;margin:0 0 18px}
+.pinboard-page .pinboard-note .check-card h3{font-size:13px;color:#65552e}
+.pinboard-page .pinboard-note .check-card p{font-size:16px;line-height:1.9;margin-top:7px}
+.pinboard-page .pinboard-note .btn{background:transparent;border-color:#c1b47a;color:var(--pin-note-ink);font-size:13px;gap:8px}
+.pinboard-page .pinboard-note .btn:hover{background:#f0df9b;border-color:#9d8f58}
+.pinboard-page .pinboard-note .learn-footer{font-size:11px;line-height:1.8;color:#65552e;margin-top:12px}
+.pinboard-page .pinboard-note .completed{font-size:12px;background:#e6e7bc;color:#3f583a;margin-top:12px}
+.pinboard-page .pinboard-note .ask-from-instructions{font-size:12px;min-height:44px;color:#3b531f;align-items:center;text-decoration:underline;margin-top:6px}
+.pinboard-tools{margin-top:auto;align-self:flex-end;background:var(--paper);padding:12px 15px;border:1px solid var(--line);border-radius:10px;max-width:330px}
+.pinboard-tools .btn{border:0;padding:5px 0;gap:9px;font-size:12px;background:transparent}
+.pinboard-tools .small{font-size:11px;line-height:1.8;margin-top:6px}
+.pinboard-question-workspace{margin-top:24px}
+.pinboard-page .pinboard-canvas>.question-panel{grid-area:question;position:relative;z-index:1;margin:0;padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:12px}
+.pinboard-page .question-panel h2{font-size:21px;font-weight:600;letter-spacing:-.025em}
+.pinboard-page .question-panel .intent-help{font-size:12px;margin-top:8px}
+.pinboard-page .question-photo-link{min-height:44px;display:inline-flex;align-items:center;font-size:12px;margin:0}
+.pinboard-page .question-panel .small{font-size:12px;line-height:1.8}
+.pinboard-page .question-panel .field{margin-top:14px}
+.pinboard-page .question-panel textarea{background:var(--paper);font-size:16px;line-height:1.7;border-color:var(--line);border-radius:8px;min-height:86px}
+.pinboard-page .question-panel textarea::placeholder{color:var(--muted);opacity:1}
+.pinboard-page .question-history{margin-top:22px}
+.pinboard-page .question-turn{border:0;border-top:1px solid var(--line);border-radius:0;background:var(--paper);padding:18px 0;line-height:1.8}
+.pinboard-page .rule-assessment{border:0;background:#edf1e8;padding:15px;border-radius:7px}
+.pinboard-page .rule-assessment h3{font-size:15px}
+.pinboard-page .rule-assessment li,.pinboard-page .rule-assessment p{font-size:15px}
+.pinboard-page .condition-state{font-size:12px}
+.pinboard-page .approved-answer-context{background:transparent;border:0;border-radius:0;padding:0}
+.pinboard-page .approved-answer-context h3{font-size:14px}
+.pinboard-page .approved-answer-context .full-approved-context{font-size:13px;line-height:1.9}
+.pinboard-page .answer-location-label{border-radius:0;background:var(--pale);font-size:12px;line-height:1.8}
+.pinboard-page .pinboard-question-workspace .guide-search{margin:0;padding:4px 20px 16px;border-color:var(--line);border-radius:12px;background:var(--paper)}
+.pinboard-page .guide-search summary{font-size:14px;min-height:56px}
+.pinboard-page .guide-search .small{font-size:12px;line-height:1.8}
+.pinboard-page .search-result p{font-size:13px;line-height:1.9}
+.pinboard-page .search-result p.small{font-size:11px;color:var(--muted);margin-bottom:3px}
+.pinboard-page .search-result h3{font-size:14px}
+.pinboard-page .search-result .btn{font-size:12px}
+
+.pinboard-page .question-turn{scroll-margin-top:24px}
+.pinboard-page .question-turn .answer-location-shortcut{margin:8px 0 0;gap:7px;min-height:44px}
+.pinboard-page .approved-answer-context h4{font-size:13px;font-weight:600;margin:17px 0 8px}
+.pinboard-page .approved-answer-context .full-approved-context{font-size:15px;line-height:1.85;white-space:pre-wrap;margin:8px 0 0}
+.pinboard-page .rule-key{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:2px 14px}
+.pinboard-page .rule-key a{display:inline-flex;align-items:center;min-height:44px;font-size:12px;line-height:1.6;color:#254faa;text-underline-offset:4px}
+.pinboard-page .full-approved-context mark{background:#dae5ff;color:inherit;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.pinboard-page .rule-key .other-target-quote{color:#50574b}
+.pinboard-page .full-approved-context .other-target-quote{background:#eeeee6}
+.pinboard-page .quote-anchor{scroll-margin-top:44px}
+.pinboard-page .ask-again-link{display:inline-flex;align-items:center;min-height:44px;font-size:13px;margin-top:12px;text-underline-offset:4px}
+.pinboard-page .answer-pending{margin-top:14px}
+.pinboard-page .answer-pending>p:first-child{display:flex;align-items:center;gap:9px;font-size:14px}
+.pinboard-page .answer-pending .small{margin-top:8px}
+@media(max-width:850px){
+  .pinboard-page .approved-answer-context .full-approved-context,.pinboard-page .answer-text{font-size:16px}
+}
+
+@media(max-width:1100px){
+  .pinboard-page .learner-workbench{padding:0 20px 45px}
+  .pinboard-canvas{grid-template-columns:minmax(0,1.45fr) minmax(270px,1fr);column-gap:28px;padding:23px}
+  .pinboard-related{grid-template-columns:1fr;padding-left:14px}
+  .pinboard-step-card{max-width:400px}
+  .pinboard-page .pinboard-note{padding:21px}
+}
+@media(max-width:850px){
+  .pinboard-page .masthead{height:56px;padding:0 18px}
+  .pinboard-page .brand-sub{display:none}
+  .pinboard-page .learner-workbench{margin:12px auto;padding:0 12px 35px}
+  .pinboard-page .learn-header{align-items:flex-start;gap:13px}
+  .pinboard-page .learn-header h1{font-size:21px}
+  .pinboard-guide-subtitle{font-size:12px;line-height:1.8}
+  .pinboard-page .learn-header>.status-pill{font-size:10px;max-width:75px;white-space:normal;line-height:1.6;padding-top:4px}
+  .pinboard-page .learn-header>.status-pill .pinboard-icon{width:14px;height:14px}
+  .pinboard-page .demo-origin{font-size:11px;line-height:1.8;margin-top:11px}
+  .pinboard-board{border-radius:12px}
+  .pinboard-board-bar{grid-template-columns:1fr;gap:8px;padding:14px}
+  .pinboard-board-bar .current-step-title{font-size:18px;line-height:1.6}
+  .pinboard-page .pinboard-board-bar .learn-nav{width:100%;gap:8px}
+  .pinboard-page .learn-nav select{font-size:13px}
+  .pinboard-canvas{grid-template-columns:minmax(0,1fr);grid-template-areas:"photo" "notes" "question" "related";gap:16px;padding:12px}
+  .pinboard-connector,.pinboard-tools{display:none}
+  .pinboard-page .selection-controls .btn{flex:initial;font-size:12px;padding:9px 10px}
+  .pinboard-page .read-approved{font-size:12px}
+  .pinboard-photo-card{padding:8px}
+  .pinboard-photo-caption{font-size:12px}
+  .pinboard-related{padding-left:0;gap:12px}
+  .pinboard-step-card{transform:none!important;max-width:none}
+  .pinboard-step-card:only-child{max-width:none}
+  .pinboard-step-card img{width:72px;height:54px}
+  .pinboard-notes{padding:0;gap:0}
+  .pinboard-page .pinboard-note{transform:none;padding:22px}
+  .pinboard-page .pinboard-note .instruction{font-size:16px;line-height:1.85;margin-top:16px}
+  .pinboard-question-workspace{margin-top:18px}
+  .pinboard-page .pinboard-canvas>.question-panel{padding:16px}
+  .pinboard-page .question-panel h2{font-size:19px}
+  .pinboard-page .pinboard-question-workspace .guide-search{padding:4px 18px 14px}
+}
+@media(prefers-reduced-motion:reduce){.pinboard-page .btn{transition:none}}
+
+/* Keep a selected object's context beside its answer without another page trip. */
+.pinboard-page .answer-location-shortcut{justify-content:flex-start;text-align:left;width:100%;padding:8px;gap:12px}
+.answer-photo-thumb{position:relative;display:block;flex:0 0 112px;line-height:0;overflow:hidden;border-radius:4px}
+.answer-photo-thumb img{display:block;width:100%;height:auto}
+.pinboard-page .question-help{margin-top:14px;border-top:1px solid var(--line)}
+.pinboard-page .question-help summary{font-size:12px;color:var(--muted);min-height:44px}
+.pinboard-page .question-help .question-footnote{margin:0 0 12px}
+.pinboard-page .question-panel .answer-boundary{line-height:1.7}
+@media(max-width:850px){
+  .pinboard-page .selection-help{margin:6px 0 10px}
+  .pinboard-page .pinboard-note{padding:18px}
+  .pinboard-page .rule-assessment p,.pinboard-page .rule-assessment li{font-size:16px}
+  .pinboard-page .rule-assessment{padding:12px;margin:10px 0}
+  .pinboard-page .question-panel .small{line-height:1.7}
+  .pinboard-page .rule-key a{font-size:12px;min-height:44px}
+  .answer-photo-thumb{flex-basis:96px}
+}
+
+.step-completion-actions{display:flex;flex-wrap:wrap;gap:8px}
+.pinboard-page .pinboard-note #continue-step{background:var(--blue);border-color:var(--blue);color:white}
+.pinboard-page .pinboard-note #continue-step:hover{background:#1649b2;border-color:#1649b2}
+.pinboard-page .rule-assessment h3{font-size:17px;line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
+.pinboard-page [tabindex="-1"]:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.pinboard-page :is(#step-heading,#approved-heading,#question-heading,.answer-status,.rule-assessment h3,.question-error,.selection-error){scroll-margin-top:16px}

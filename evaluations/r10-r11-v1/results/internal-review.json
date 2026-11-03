@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex internal textual/visual review, not an independent human",
+  "coverage": "all 28 current-stage answers; full expanded context excluded from quote score",
+  "checks": [
+    "AND condition contrast D07/D08",
+    "OR alternatives V03/V04 versus neither V05",
+    "unknown prerequisite D10/H05",
+    "wrong object or role D06/D11/V06/H06/H07",
+    "no invented absent rule D12/V08/H08",
+    "photo target identity/color/location consistent with staged image"
+  ],
+  "observations": [
+    "Baseline rule excerpts were often relevant but had no explicit scenario judgment; absence of assessment is not a measured 0% semantic accuracy.",
+    "Local condition state is not a permission by itself; a prohibition can apply while the overall action is blocked. UI distinguishes overall decision from cited basis.",
+    "Case/expected labels were not changed after freezing; final sealed results were not used to select another model/prompt fix.",
+    "All observed categorical decisions and required-rule coverage matched the prospective labels; this does not establish general accuracy."
+  ]
+}

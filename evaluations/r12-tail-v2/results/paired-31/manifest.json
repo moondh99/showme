@@ -1,0 +1,1423 @@
+{
+  "baseline_commit": "3a51ee5",
+  "phase": "paired",
+  "suite": {
+    "baseline_commit": "953d414",
+    "created_before_implementation": true,
+    "cases": 28,
+    "splits": {
+      "discovery": 12,
+      "validation": 8,
+      "sealed": 8
+    },
+    "hashes": {
+      "contexts.json": "9366ee39e9cde7913fe502325106ceedc6fb71de37974109e04c4dd7bfb8bca3",
+      "cases.json": "c5175190bfb99773943cffeb9149716282d64a35321c1ebc26177db4bfaa7860"
+    },
+    "limits": "Prospectively frozen, agent authored; no independent human adjudication; same known staged image with new rule contexts. Sealed split is not to be used for selecting fixes."
+  },
+  "workers": 2,
+  "retry": 0,
+  "response_cache": false,
+  "shared_draft": false,
+  "jobs": [
+    [
+      {
+        "id": "H05",
+        "profile": "legacy",
+        "case": {
+          "id": "H05",
+          "split": "sealed",
+          "context": "stay",
+          "question": "숙박 예약과 신원은 확인했는데 나이는 아직 몰라요. 노란 걸 발급할까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "미성년자는 보호자 동행도 확인"
+            ]
+          ],
+          "expected_decision": "conditional",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      },
+      {
+        "id": "H05",
+        "profile": "corrective",
+        "case": {
+          "id": "H05",
+          "split": "sealed",
+          "context": "stay",
+          "question": "숙박 예약과 신원은 확인했는데 나이는 아직 몰라요. 노란 걸 발급할까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "미성년자는 보호자 동행도 확인"
+            ]
+          ],
+          "expected_decision": "conditional",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "D09",
+        "profile": "corrective",
+        "case": {
+          "id": "D09",
+          "split": "discovery",
+          "context": "access",
+          "question": "기존 카드는 잃어버렸고 관리자 응답은 아직이에요. 노란 걸 즉시 받는 쪽인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "관리자 확인 전에는 내주지 않습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "직원용"
+          ]
+        }
+      },
+      {
+        "id": "D09",
+        "profile": "legacy",
+        "case": {
+          "id": "D09",
+          "split": "discovery",
+          "context": "access",
+          "question": "기존 카드는 잃어버렸고 관리자 응답은 아직이에요. 노란 걸 즉시 받는 쪽인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "관리자 확인 전에는 내주지 않습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "직원용"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "D03",
+        "profile": "legacy",
+        "case": {
+          "id": "D03",
+          "split": "discovery",
+          "context": "access",
+          "question": "파란 상자의 생김새를 짧게 말해 줘",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "D03",
+        "profile": "corrective",
+        "case": {
+          "id": "D03",
+          "split": "discovery",
+          "context": "access",
+          "question": "파란 상자의 생김새를 짧게 말해 줘",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "D04",
+        "profile": "corrective",
+        "case": {
+          "id": "D04",
+          "split": "discovery",
+          "context": "access",
+          "question": "사진에 파란 통은 몇 개나 찍혀 있나요?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "D04",
+        "profile": "legacy",
+        "case": {
+          "id": "D04",
+          "split": "discovery",
+          "context": "access",
+          "question": "사진에 파란 통은 몇 개나 찍혀 있나요?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "D02",
+        "profile": "legacy",
+        "case": {
+          "id": "D02",
+          "split": "discovery",
+          "context": "access",
+          "question": "노란 쟁반의 외형만 묘사해 줄래요?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "D02",
+        "profile": "corrective",
+        "case": {
+          "id": "D02",
+          "split": "discovery",
+          "context": "access",
+          "question": "노란 쟁반의 외형만 묘사해 줄래요?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "H06",
+        "profile": "corrective",
+        "case": {
+          "id": "H06",
+          "split": "sealed",
+          "context": "stay",
+          "question": "인솔자가 확인했으니까 파란 카드를 가진 채 숙박 구역으로 가도 무방하겠죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "견학증으로 숙박 구역에 들어갈 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "견학"
+          ]
+        }
+      },
+      {
+        "id": "H06",
+        "profile": "legacy",
+        "case": {
+          "id": "H06",
+          "split": "sealed",
+          "context": "stay",
+          "question": "인솔자가 확인했으니까 파란 카드를 가진 채 숙박 구역으로 가도 무방하겠죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "견학증으로 숙박 구역에 들어갈 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "견학"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "H07",
+        "profile": "legacy",
+        "case": {
+          "id": "H07",
+          "split": "sealed",
+          "context": "stay",
+          "question": "인솔자 확인 없이 왔어요. 이걸 받아 가면 되는 걸로 이해했는데요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "인솔자 확인 뒤에만"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "견학"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 640
+            },
+            "box": [
+              48,
+              120,
+              440,
+              810
+            ]
+          }
+        }
+      },
+      {
+        "id": "H07",
+        "profile": "corrective",
+        "case": {
+          "id": "H07",
+          "split": "sealed",
+          "context": "stay",
+          "question": "인솔자 확인 없이 왔어요. 이걸 받아 가면 되는 걸로 이해했는데요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "인솔자 확인 뒤에만"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "견학"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 640
+            },
+            "box": [
+              48,
+              120,
+              440,
+              810
+            ]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "id": "D05",
+        "profile": "corrective",
+        "case": {
+          "id": "D05",
+          "split": "discovery",
+          "context": "access",
+          "question": "청색 통은 누구 몫으로 잡혀 있죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문자 임시 출입증"
+            ]
+          ],
+          "expected_decision": "policy",
+          "target_aliases": [
+            "파란",
+            "청색",
+            "방문자"
+          ]
+        }
+      },
+      {
+        "id": "D05",
+        "profile": "legacy",
+        "case": {
+          "id": "D05",
+          "split": "discovery",
+          "context": "access",
+          "question": "청색 통은 누구 몫으로 잡혀 있죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문자 임시 출입증"
+            ]
+          ],
+          "expected_decision": "policy",
+          "target_aliases": [
+            "파란",
+            "청색",
+            "방문자"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "V03",
+        "profile": "legacy",
+        "case": {
+          "id": "V03",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 수료했어요. 책임자 없이 혼자 왔는데 노란 표 받을 수 있겠죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "교육 이수 또는 책임자 동행 중 하나"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      },
+      {
+        "id": "V03",
+        "profile": "corrective",
+        "case": {
+          "id": "V03",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 수료했어요. 책임자 없이 혼자 왔는데 노란 표 받을 수 있겠죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "교육 이수 또는 책임자 동행 중 하나"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "H04",
+        "profile": "corrective",
+        "case": {
+          "id": "H04",
+          "split": "sealed",
+          "context": "stay",
+          "question": "예약과 신원 확인은 끝났지만 미성년자 혼자 왔어요. 노란 카드 내줄까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "미성년자는 보호자 동행도 확인"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      },
+      {
+        "id": "H04",
+        "profile": "legacy",
+        "case": {
+          "id": "H04",
+          "split": "sealed",
+          "context": "stay",
+          "question": "예약과 신원 확인은 끝났지만 미성년자 혼자 왔어요. 노란 카드 내줄까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "미성년자는 보호자 동행도 확인"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "H01",
+        "profile": "legacy",
+        "case": {
+          "id": "H01",
+          "split": "sealed",
+          "context": "stay",
+          "question": "숙박자가 쓸 카드 쪽의 생긴 모습을 사진만 보고 적어 줘.",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "H01",
+        "profile": "corrective",
+        "case": {
+          "id": "H01",
+          "split": "sealed",
+          "context": "stay",
+          "question": "숙박자가 쓸 카드 쪽의 생긴 모습을 사진만 보고 적어 줘.",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "D08",
+        "profile": "corrective",
+        "case": {
+          "id": "D08",
+          "split": "discovery",
+          "context": "access",
+          "question": "신분 대조도 했고 약속도 확인했어요. 파란 통의 카드 내주면 되나요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문 약속 확인과 신분 대조가 모두"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "파란",
+            "방문자"
+          ]
+        }
+      },
+      {
+        "id": "D08",
+        "profile": "legacy",
+        "case": {
+          "id": "D08",
+          "split": "discovery",
+          "context": "access",
+          "question": "신분 대조도 했고 약속도 확인했어요. 파란 통의 카드 내주면 되나요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문 약속 확인과 신분 대조가 모두"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "파란",
+            "방문자"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "D07",
+        "profile": "legacy",
+        "case": {
+          "id": "D07",
+          "split": "discovery",
+          "context": "access",
+          "question": "방문 확인은 됐는데 신분증 대조는 건너뛰고 파란 걸 나눠 줘도 되죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문 약속 확인과 신분 대조가 모두"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "방문자"
+          ]
+        }
+      },
+      {
+        "id": "D07",
+        "profile": "corrective",
+        "case": {
+          "id": "D07",
+          "split": "discovery",
+          "context": "access",
+          "question": "방문 확인은 됐는데 신분증 대조는 건너뛰고 파란 걸 나눠 줘도 되죠?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문 약속 확인과 신분 대조가 모두"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "방문자"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "D11",
+        "profile": "corrective",
+        "case": {
+          "id": "D11",
+          "split": "discovery",
+          "context": "access",
+          "question": "이걸 직원용으로 써도 되겠는데요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문자 임시 출입증"
+            ],
+            [
+              "직원용으로 바꾸어 주지 않습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "방문자"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 640
+            },
+            "box": [
+              48,
+              120,
+              440,
+              810
+            ]
+          }
+        }
+      },
+      {
+        "id": "D11",
+        "profile": "legacy",
+        "case": {
+          "id": "D11",
+          "split": "discovery",
+          "context": "access",
+          "question": "이걸 직원용으로 써도 되겠는데요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "방문자 임시 출입증"
+            ],
+            [
+              "직원용으로 바꾸어 주지 않습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "방문자"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 640
+            },
+            "box": [
+              48,
+              120,
+              440,
+              810
+            ]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "id": "D12",
+        "profile": "legacy",
+        "case": {
+          "id": "D12",
+          "split": "discovery",
+          "context": "access",
+          "question": "청색 출입증은 자정이 지나면 자동으로 무효가 되나요?",
+          "expected_intent": "procedure",
+          "expected_status": "insufficient_information",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "D12",
+        "profile": "corrective",
+        "case": {
+          "id": "D12",
+          "split": "discovery",
+          "context": "access",
+          "question": "청색 출입증은 자정이 지나면 자동으로 무효가 되나요?",
+          "expected_intent": "procedure",
+          "expected_status": "insufficient_information",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "V02",
+        "profile": "corrective",
+        "case": {
+          "id": "V02",
+          "split": "validation",
+          "context": "equipment",
+          "question": "좌우 용기의 테두리 색조를 비교해서 말해 주세요.",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "V02",
+        "profile": "legacy",
+        "case": {
+          "id": "V02",
+          "split": "validation",
+          "context": "equipment",
+          "question": "좌우 용기의 테두리 색조를 비교해서 말해 주세요.",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "D01",
+        "profile": "legacy",
+        "case": {
+          "id": "D01",
+          "split": "discovery",
+          "context": "access",
+          "question": "방문자용으로 사용하는 바구니가 화면 어디쯤 찍혔죠?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "D01",
+        "profile": "corrective",
+        "case": {
+          "id": "D01",
+          "split": "discovery",
+          "context": "access",
+          "question": "방문자용으로 사용하는 바구니가 화면 어디쯤 찍혔죠?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "V08",
+        "profile": "corrective",
+        "case": {
+          "id": "V08",
+          "split": "validation",
+          "context": "equipment",
+          "question": "노란 표의 보증금은 얼마로 잡혀 있나요?",
+          "expected_intent": "procedure",
+          "expected_status": "insufficient_information",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "V08",
+        "profile": "legacy",
+        "case": {
+          "id": "V08",
+          "split": "validation",
+          "context": "equipment",
+          "question": "노란 표의 보증금은 얼마로 잡혀 있나요?",
+          "expected_intent": "procedure",
+          "expected_status": "insufficient_information",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "V07",
+        "profile": "legacy",
+        "case": {
+          "id": "V07",
+          "split": "validation",
+          "context": "equipment",
+          "question": "보관할 물건은 아직 받지 않았는데 파란 표부터 끊을까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "물품 인수 후에만"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ]
+        }
+      },
+      {
+        "id": "V07",
+        "profile": "corrective",
+        "case": {
+          "id": "V07",
+          "split": "validation",
+          "context": "equipment",
+          "question": "보관할 물건은 아직 받지 않았는데 파란 표부터 끊을까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "물품 인수 후에만"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "V06",
+        "profile": "corrective",
+        "case": {
+          "id": "V06",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 받았으니 파란 표로 장비를 가져가는 걸로 할게요.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ]
+        }
+      },
+      {
+        "id": "V06",
+        "profile": "legacy",
+        "case": {
+          "id": "V06",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 받았으니 파란 표로 장비를 가져가는 걸로 할게요.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "H03",
+        "profile": "legacy",
+        "case": {
+          "id": "H03",
+          "split": "sealed",
+          "context": "stay",
+          "question": "성인이고 예약과 신원 확인을 마쳤어요. 노란 출입증을 받아도 되겠어요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "예약 확인과 신원 대조가 모두"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      },
+      {
+        "id": "H03",
+        "profile": "corrective",
+        "case": {
+          "id": "H03",
+          "split": "sealed",
+          "context": "stay",
+          "question": "성인이고 예약과 신원 확인을 마쳤어요. 노란 출입증을 받아도 되겠어요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "예약 확인과 신원 대조가 모두"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "V04",
+        "profile": "corrective",
+        "case": {
+          "id": "V04",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 안 받았지만 책임자가 같이 왔어요. 노란 건 발급 가능한 편인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "교육 이수 또는 책임자 동행 중 하나"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      },
+      {
+        "id": "V04",
+        "profile": "legacy",
+        "case": {
+          "id": "V04",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 안 받았지만 책임자가 같이 왔어요. 노란 건 발급 가능한 편인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "교육 이수 또는 책임자 동행 중 하나"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "D06",
+        "profile": "legacy",
+        "case": {
+          "id": "D06",
+          "split": "discovery",
+          "context": "access",
+          "question": "방문자가 노란 출입증으로 갈아타도 무방한가?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "직원용 재발급"
+            ],
+            [
+              "직원용으로 바꾸어 주지 않습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "직원용"
+          ]
+        }
+      },
+      {
+        "id": "D06",
+        "profile": "corrective",
+        "case": {
+          "id": "D06",
+          "split": "discovery",
+          "context": "access",
+          "question": "방문자가 노란 출입증으로 갈아타도 무방한가?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "직원용 재발급"
+            ],
+            [
+              "직원용으로 바꾸어 주지 않습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "직원용"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "V01",
+        "profile": "corrective",
+        "case": {
+          "id": "V01",
+          "split": "validation",
+          "context": "equipment",
+          "question": "대여에 쓰는 쪽 통은 사진상 어느 방향으로 보여요?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "V01",
+        "profile": "legacy",
+        "case": {
+          "id": "V01",
+          "split": "validation",
+          "context": "equipment",
+          "question": "대여에 쓰는 쪽 통은 사진상 어느 방향으로 보여요?",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "V05",
+        "profile": "legacy",
+        "case": {
+          "id": "V05",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육 기록도 없고 동행자도 없어요. 노란 걸 먼저 빌려가면 안 될까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "어느 쪽도 확인되지 않으면"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      },
+      {
+        "id": "V05",
+        "profile": "corrective",
+        "case": {
+          "id": "V05",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육 기록도 없고 동행자도 없어요. 노란 걸 먼저 빌려가면 안 될까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "어느 쪽도 확인되지 않으면"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "D10",
+        "profile": "corrective",
+        "case": {
+          "id": "D10",
+          "split": "discovery",
+          "context": "access",
+          "question": "원래 카드 반납 여부는 몰라요. 직원에게 노란 카드를 주면 끝인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "기존 카드 반납 뒤에만"
+            ]
+          ],
+          "expected_decision": "conditional",
+          "target_aliases": [
+            "노란",
+            "직원용"
+          ]
+        }
+      },
+      {
+        "id": "D10",
+        "profile": "legacy",
+        "case": {
+          "id": "D10",
+          "split": "discovery",
+          "context": "access",
+          "question": "원래 카드 반납 여부는 몰라요. 직원에게 노란 카드를 주면 끝인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "기존 카드 반납 뒤에만"
+            ]
+          ],
+          "expected_decision": "conditional",
+          "target_aliases": [
+            "노란",
+            "직원용"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "H08",
+        "profile": "legacy",
+        "case": {
+          "id": "H08",
+          "split": "sealed",
+          "context": "stay",
+          "question": "노란 카드의 분실 수수료는 어느 정도죠?",
+          "expected_intent": "procedure",
+          "expected_status": "insufficient_information",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "H08",
+        "profile": "corrective",
+        "case": {
+          "id": "H08",
+          "split": "sealed",
+          "context": "stay",
+          "question": "노란 카드의 분실 수수료는 어느 정도죠?",
+          "expected_intent": "procedure",
+          "expected_status": "insufficient_information",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "H02",
+        "profile": "corrective",
+        "case": {
+          "id": "H02",
+          "split": "sealed",
+          "context": "stay",
+          "question": "사진 속 두 상자 사이가 붙어 있는지 떨어져 있는지 궁금해요.",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      },
+      {
+        "id": "H02",
+        "profile": "legacy",
+        "case": {
+          "id": "H02",
+          "split": "sealed",
+          "context": "stay",
+          "question": "사진 속 두 상자 사이가 붙어 있는지 떨어져 있는지 궁금해요.",
+          "expected_intent": "appearance",
+          "expected_status": "answered",
+          "required_quote_groups": []
+        }
+      }
+    ],
+    [
+      {
+        "id": "SLOW-1",
+        "profile": "legacy",
+        "case": {
+          "id": "SLOW-1",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      },
+      {
+        "id": "SLOW-1",
+        "profile": "corrective",
+        "case": {
+          "id": "SLOW-1",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "id": "SLOW-2",
+        "profile": "corrective",
+        "case": {
+          "id": "SLOW-2",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      },
+      {
+        "id": "SLOW-2",
+        "profile": "legacy",
+        "case": {
+          "id": "SLOW-2",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "id": "SLOW-3",
+        "profile": "legacy",
+        "case": {
+          "id": "SLOW-3",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      },
+      {
+        "id": "SLOW-3",
+        "profile": "corrective",
+        "case": {
+          "id": "SLOW-3",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      }
+    ]
+  ],
+  "profiles": {
+    "legacy": {
+      "plan": null,
+      "audit": null,
+      "repair": null
+    },
+    "plan_low": {
+      "plan": "low",
+      "audit": null,
+      "repair": null
+    },
+    "audit_low": {
+      "plan": null,
+      "audit": "low",
+      "repair": null
+    },
+    "bounded": {
+      "plan": "low",
+      "audit": "low",
+      "repair": null
+    },
+    "corrective": {
+      "plan": "low",
+      "audit": "low",
+      "audit_style": "full_correction",
+      "max_calls": 2
+    }
+  },
+  "source_hashes": {
+    "src/showme/reasoning.py": "6ffba07d93cd0bcb53e38dc1d63057a5704a38924e8257526908bb30986d7ee5",
+    "src/showme/vision.py": "c487e23e3ca1555f3350764d64c65c7bd10dffc4783e657ec36e6c5e8b7b23ab",
+    "src/showme/app.py": "93837a4fada28b047105aa80263688e791da39020adbb1a4e7dc9d0cf5e2056e",
+    "src/showme/models.py": "e37f8275a57a56d1b7f7070cb02a1cc91178d12063b96a565ce2d407362d53e3",
+    "src/showme/answer_policy.py": "665b668e6c2bffe715a0dc17bc1a2319e0e63f0bb59b5f18e21f643ac3d7a003",
+    "scripts/benchmark_reasoning.py": "3b31f7d988add5deae5360da5c3c92959db4e0f5f44c038d342ef2276e50ad61"
+  }
+}

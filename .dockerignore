@@ -1,0 +1,17 @@
+**
+!Dockerfile
+!requirements.txt
+!src/
+!src/**
+!web/
+!web/**
+!scripts/
+!scripts/serve_hosted.py
+!public/
+!public/demo/
+!public/demo/reception-setup/
+!public/demo/reception-setup/**
+**/__pycache__/
+**/*.pyc
+!public/demo/sample-notepad.jpg
+!public/demo/sample-photo-source.json

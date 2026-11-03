@@ -1,0 +1,243 @@
+{
+  "demo_sign": {
+    "image": "public/demo/reception-setup/01-sign.png",
+    "image_origin": "synthetic",
+    "canonical_sha256": "4eafa76baecb8a374144bdc926d866a5b8c413b2d86faffab098a748175f8b3d",
+    "approved_step": {
+      "id": "step-e48bee89-ad5f-4028-b7c5-1400e4eec7f7",
+      "title": "접수 안내판 세우기",
+      "instruction": "접수대 왼쪽에 CHECK-IN 안내판을 세웁니다. 참가자가 접수 위치를 알 수 있도록 글자가 참가자 쪽을 향하는지 확인합니다.",
+      "completion_check": "CHECK-IN 글자가 보이고 안내판이 접수대 왼쪽에 세워져 있습니다.",
+      "highlights": [
+        {
+          "label": "CHECK-IN 안내판",
+          "box": [
+            158,
+            109,
+            562,
+            781
+          ],
+          "origin": "author"
+        }
+      ]
+    }
+  },
+  "demo_tools": {
+    "image": "public/demo/reception-setup/02-signing-tools.png",
+    "image_origin": "synthetic",
+    "canonical_sha256": "ca08590c468b78f060f5e0609364e3400ce8fdb2507c80aae40edefb64e94ba9",
+    "approved_step": {
+      "id": "step-6eef08db-878c-4454-898a-3f2be51b42b9",
+      "title": "서명 도구와 운영자 펜 구분하기",
+      "instruction": "회색 클립보드 오른쪽에 검은 펜과 파란 펜을 구분해 준비합니다. 참가자 서명에는 검은 펜을 사용합니다. 파란 펜은 운영자 메모용으로만 사용합니다.",
+      "completion_check": "클립보드 오른쪽에 검은 펜과 파란 펜이 각각 보이고 서로 구분됩니다.",
+      "highlights": [
+        {
+          "label": "회색 클립보드",
+          "box": [
+            131,
+            108,
+            703,
+            898
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "검은 펜",
+          "box": [
+            715,
+            332,
+            773,
+            754
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "파란 펜",
+          "box": [
+            797,
+            353,
+            847,
+            790
+          ],
+          "origin": "author"
+        }
+      ]
+    }
+  },
+  "demo_badges": {
+    "image": "public/demo/reception-setup/03-badge-trays.png",
+    "image_origin": "synthetic",
+    "canonical_sha256": "a53d0fbf1d5bc1b512837be30b45555a3619278a0d9d093fcbc17386f8941df4",
+    "approved_step": {
+      "id": "step-c998eba9-0569-49e5-8be3-db6f71d0f4b0",
+      "title": "사전등록과 현장등록 명찰 분리하기",
+      "instruction": "사진 기준 왼쪽의 파란 트레이에는 사전등록 참가자용 명찰을 놓습니다. 오른쪽의 노란 트레이에는 현장등록 참가자용 명찰을 놓습니다. 두 트레이 사이를 비워 구분합니다.",
+      "completion_check": "왼쪽 파란 트레이와 오른쪽 노란 트레이가 서로 떨어져 보이고 각 명찰이 트레이 안에 있습니다.",
+      "highlights": [
+        {
+          "label": "파란 트레이(사전등록 명찰용)",
+          "box": [
+            46,
+            124,
+            446,
+            809
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "노란 트레이(현장등록 명찰용)",
+          "box": [
+            552,
+            125,
+            943,
+            824
+          ],
+          "origin": "author"
+        }
+      ]
+    }
+  },
+  "demo_overview": {
+    "image": "public/demo/reception-setup/04-overview.png",
+    "image_origin": "synthetic",
+    "canonical_sha256": "39fe2d84cf35f5b9e5428381449b566d3a6871d3472d43921cb1d1843c147a68",
+    "approved_step": {
+      "id": "step-e836866f-6f5a-40cf-8775-f333ac460c7e",
+      "title": "접수대 전체 배치 점검하기",
+      "instruction": "왼쪽의 CHECK-IN 안내판, 중앙의 파란색·노란색 명찰 트레이, 오른쪽의 클립보드·검은 펜·파란 펜을 확인합니다. 참가자가 설 수 있도록 접수대 앞쪽 왼편을 비워 둡니다. 배치를 직접 점검한 뒤 완료 표시합니다.",
+      "completion_check": "안내판·두 트레이·클립보드·두 펜이 보이고 접수대 앞쪽 왼편이 비어 있습니다.",
+      "highlights": [
+        {
+          "label": "안내판",
+          "box": [
+            90,
+            92,
+            252,
+            346
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "파란색 명찰 트레이",
+          "box": [
+            225,
+            296,
+            455,
+            578
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "노란색 명찰 트레이",
+          "box": [
+            468,
+            328,
+            675,
+            632
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "서명용 클립보드",
+          "box": [
+            686,
+            439,
+            897,
+            763
+          ],
+          "origin": "author"
+        }
+      ]
+    }
+  },
+  "real_notepad": {
+    "image": "experiments/meta-vision/inputs/notepad.jpg",
+    "image_origin": "real_cc0",
+    "canonical_sha256": "1dcb4698c226809e215ab34b52e973f174233a1c8b246fcd57f75f88863feee7",
+    "approved_step": {
+      "id": "step-5816c194-1f7d-45f6-aa20-fab50bbde252",
+      "title": "격자 노트와 검은 펜 준비 확인",
+      "instruction": "격자 노트와 검은 펜을 함께 준비하십시오. 두 물건은 참가자가 서명할 때 사용할 도구입니다. 두 물건이 함께 보이는지 확인하십시오.",
+      "completion_check": "격자 노트와 검은 펜 두 물건이 함께 보인다.",
+      "highlights": [
+        {
+          "label": "격자 노트",
+          "box": [
+            228,
+            434,
+            1000,
+            999
+          ],
+          "origin": "model"
+        },
+        {
+          "label": "검은 펜",
+          "box": [
+            508,
+            535,
+            882,
+            704
+          ],
+          "origin": "author"
+        }
+      ]
+    }
+  },
+  "real_desk": {
+    "image": "experiments/meta-vision/inputs/desk.jpg",
+    "image_origin": "real_cc0",
+    "canonical_sha256": "7779338a0eb327e738faac159fa2a839ff0a1300562cf67a8a3cf7cba034465c",
+    "approved_step": {
+      "id": "step-9f949384-c310-439a-ae6e-ddb62deb3b55",
+      "title": "노트북 왼쪽 볼펜 위치 확인",
+      "instruction": "노트북 왼쪽에 놓인 은색과 초록색 볼펜을 찾아 사진에서 볼펜의 위치를 확인하십시오.",
+      "completion_check": "노트북 왼쪽에 은색과 초록색 볼펜이 보이는 것으로 확인됨",
+      "highlights": [
+        {
+          "label": "은색과 초록색 볼펜",
+          "box": [
+            6,
+            284,
+            255,
+            690
+          ],
+          "origin": "model"
+        }
+      ]
+    }
+  },
+  "real_reception": {
+    "image": "experiments/meta-vision/inputs/reception.jpg",
+    "image_origin": "real_cc0",
+    "canonical_sha256": "4fe035fbfb28c657a6112b5b5a4cc3206518a54ceb5f1d29732b29f2c7c514c9",
+    "approved_step": {
+      "id": "step-51a385dd-e249-4927-a7cf-4bfe2dbb4caf",
+      "title": "접수대 뒤 대형 화면 위치 확인",
+      "instruction": "접수대 뒤 벽의 큰 화면을 찾아 위치를 확인합니다. 화면에 철도 여행을 안내하는 문구가 보이는지 확인합니다.",
+      "completion_check": "접수대 뒤 벽의 큰 화면이 있고 화면에 철도 여행 안내 문구가 보인다.",
+      "highlights": [
+        {
+          "label": "접수대 뒤 벽의 큰 화면",
+          "box": [
+            267,
+            30,
+            638,
+            398
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "접수대",
+          "box": [
+            51,
+            438,
+            954,
+            979
+          ],
+          "origin": "model"
+        }
+      ]
+    }
+  }
+}

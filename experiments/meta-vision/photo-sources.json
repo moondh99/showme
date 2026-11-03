@@ -1,0 +1,35 @@
+[
+  {
+    "filename": "reception.jpg",
+    "title": "File:Reception Desk.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Reception_Desk.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Reception_Desk.jpg",
+    "author": "ITCENTRELJN",
+    "license": "CC0 1.0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "downloaded_at_utc": "2026-11-01T12:49:00.941778+00:00",
+    "sha256": "4183abc14b1bb0117df7b1d57ef9a571567eeb46c248a005449988b459e0f9ca"
+  },
+  {
+    "filename": "desk.jpg",
+    "title": "File:Desk-laptop-notebook-pen (23958719819).jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Desk-laptop-notebook-pen_(23958719819).jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Desk-laptop-notebook-pen_%2823958719819%29.jpg",
+    "author": "www.Pixel.la Free Stock Photos",
+    "license": "CC0 1.0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "downloaded_at_utc": "2026-11-01T12:49:01.432175+00:00",
+    "sha256": "e2640ac708522e0f01bb8475248c939682a687854d6750f4c1273c3904daf3a8"
+  },
+  {
+    "filename": "notepad.jpg",
+    "title": "File:Laptop picture with notepad.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Laptop_picture_with_notepad.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Laptop_picture_with_notepad.jpg",
+    "author": "Eric Bailey",
+    "license": "CC0 1.0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "downloaded_at_utc": "2026-11-01T12:49:01.512933+00:00",
+    "sha256": "0325609adb58020faf1cf1689dcc4316536d04337c0681bdfe85217488584285"
+  }
+]

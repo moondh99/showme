@@ -1,0 +1,38 @@
+{
+  "access": {
+    "image": "public/demo/reception-setup/03-badge-trays.png",
+    "image_origin": "known AI staged image; new authored scenario, not unseen-photo testing",
+    "canonical_sha256": "a53d0fbf1d5bc1b512837be30b45555a3619278a0d9d093fcbc17386f8941df4",
+    "approved_step": {
+      "id": "step-1",
+      "title": "방문 출입증과 직원 재발급",
+      "instruction": "파란 트레이의 카드는 방문자 임시 출입증입니다. 노란 트레이의 카드는 직원용 재발급 출입증입니다. 방문자 출입증을 직원용으로 바꾸어 주지 않습니다.",
+      "completion_check": "방문자 임시 출입증은 방문 약속 확인과 신분 대조가 모두 끝났을 때만 내줍니다. 직원용 재발급 출입증은 기존 카드 반납 뒤에만 내줍니다. 기존 카드를 잃어버렸으면 관리자 확인 전에는 내주지 않습니다.",
+      "highlights": []
+    }
+  },
+  "equipment": {
+    "image": "public/demo/reception-setup/03-badge-trays.png",
+    "image_origin": "known AI staged image; new authored scenario, not unseen-photo testing",
+    "canonical_sha256": "a53d0fbf1d5bc1b512837be30b45555a3619278a0d9d093fcbc17386f8941df4",
+    "approved_step": {
+      "id": "step-1",
+      "title": "물품 보관표와 공동 장비 대여표",
+      "instruction": "파란 트레이의 표는 개인 물품 보관용입니다. 노란 트레이의 표는 공동 장비 대여용입니다. 보관표로 장비를 대여할 수 없습니다.",
+      "completion_check": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다.",
+      "highlights": []
+    }
+  },
+  "stay": {
+    "image": "public/demo/reception-setup/03-badge-trays.png",
+    "image_origin": "known AI staged image; new authored scenario, not unseen-photo testing",
+    "canonical_sha256": "a53d0fbf1d5bc1b512837be30b45555a3619278a0d9d093fcbc17386f8941df4",
+    "approved_step": {
+      "id": "step-1",
+      "title": "견학증과 숙박자 출입증",
+      "instruction": "파란 트레이의 카드는 당일 회수하는 견학증입니다. 노란 트레이의 카드는 숙박자용 출입증입니다. 견학증으로 숙박 구역에 들어갈 수 없습니다.",
+      "completion_check": "견학증은 인솔자 확인 뒤에만 배부합니다. 숙박자용 출입증은 예약 확인과 신원 대조가 모두 끝나면 배부합니다. 미성년자는 보호자 동행도 확인합니다.",
+      "highlights": []
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "Internal agent regression review; same known staged image, not independent adjudication",
+  "fixed_questions": 28,
+  "selected_repeated_question": 1,
+  "selected_repetitions_per_profile": 3,
+  "all_literal_condition_quotes_valid": true,
+  "all_quality_and_latency_gates": {
+    "quality_pass": true,
+    "latency_pass": true
+  },
+  "reviewed_groups": {
+    "operating_noun_visual": [
+      "D01",
+      "V01",
+      "H01"
+    ],
+    "AND": [
+      "D07",
+      "D08",
+      "H03"
+    ],
+    "OR": [
+      "V03",
+      "V04",
+      "V05"
+    ],
+    "unknown_facts": [
+      "D10",
+      "H05"
+    ],
+    "cross_field_restrictions": [
+      "D09",
+      "V07",
+      "H04"
+    ],
+    "selected_or_wrong_target": [
+      "D11",
+      "H07",
+      "V06",
+      "SLOW-1",
+      "SLOW-2",
+      "SLOW-3"
+    ],
+    "missing_rule": [
+      "D12",
+      "V08",
+      "H08"
+    ]
+  },
+  "limits": "Automated alias/quote/state checks do not prove general semantics; prohibition state labels may vary while final blocked decision is correct. No new photo or human acceptance evidence."
+}

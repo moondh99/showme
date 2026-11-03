@@ -1,0 +1,24 @@
+{
+  "purpose": "ShowMe hackathon event reception setup demonstration",
+  "origin": "AI-generated staged scene, not real event photographs",
+  "tool": "built-in image_gen",
+  "reference": "04-overview.png",
+  "images": [
+    {
+      "filename": "04-overview.png",
+      "sha256": "0eb3f9606b0139dfacd4e112b726e844a37f3aa7c3a57d11861a7ae14a8efdea"
+    },
+    {
+      "filename": "01-sign.png",
+      "sha256": "9b0ce77ee03d84a0876e8f56604c2264519f4a5885a942ab768fde6ed17e20f1"
+    },
+    {
+      "filename": "02-signing-tools.png",
+      "sha256": "a87945447d4f9cf3b6d7638e4eaf8128d3050a747cdb26a2051523e1382fe54e"
+    },
+    {
+      "filename": "03-badge-trays.png",
+      "sha256": "8c434d8c9732b90c73b40a1e66c2066c8adf9e72d52cc86b8fe3c04a542e29a2"
+    }
+  ]
+}

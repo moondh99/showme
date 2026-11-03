@@ -1,0 +1,145 @@
+{
+  "baseline_commit": "3a51ee5",
+  "phase": "corrective-canary",
+  "suite": {
+    "baseline_commit": "953d414",
+    "created_before_implementation": true,
+    "cases": 28,
+    "splits": {
+      "discovery": 12,
+      "validation": 8,
+      "sealed": 8
+    },
+    "hashes": {
+      "contexts.json": "9366ee39e9cde7913fe502325106ceedc6fb71de37974109e04c4dd7bfb8bca3",
+      "cases.json": "c5175190bfb99773943cffeb9149716282d64a35321c1ebc26177db4bfaa7860"
+    },
+    "limits": "Prospectively frozen, agent authored; no independent human adjudication; same known staged image with new rule contexts. Sealed split is not to be used for selecting fixes."
+  },
+  "workers": 1,
+  "retry": 0,
+  "response_cache": false,
+  "shared_draft": false,
+  "jobs": [
+    [
+      {
+        "id": "SLOW",
+        "profile": "corrective",
+        "case": {
+          "id": "SLOW",
+          "split": "selected_repetition",
+          "context": "equipment",
+          "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "보관표로 장비를 대여할 수 없습니다"
+            ]
+          ],
+          "expected_decision": "blocked",
+          "target_aliases": [
+            "파란",
+            "보관"
+          ],
+          "selection": {
+            "point": {
+              "x": 240,
+              "y": 641
+            },
+            "box": [
+              139,
+              529,
+              344,
+              735
+            ]
+          }
+        }
+      }
+    ],
+    [
+      {
+        "id": "V04",
+        "profile": "corrective",
+        "case": {
+          "id": "V04",
+          "split": "validation",
+          "context": "equipment",
+          "question": "교육은 안 받았지만 책임자가 같이 왔어요. 노란 건 발급 가능한 편인가요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "교육 이수 또는 책임자 동행 중 하나"
+            ]
+          ],
+          "expected_decision": "allowed",
+          "target_aliases": [
+            "노란",
+            "대여"
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "id": "H05",
+        "profile": "corrective",
+        "case": {
+          "id": "H05",
+          "split": "sealed",
+          "context": "stay",
+          "question": "숙박 예약과 신원은 확인했는데 나이는 아직 몰라요. 노란 걸 발급할까요?",
+          "expected_intent": "procedure",
+          "expected_status": "answered",
+          "required_quote_groups": [
+            [
+              "미성년자는 보호자 동행도 확인"
+            ]
+          ],
+          "expected_decision": "conditional",
+          "target_aliases": [
+            "노란",
+            "숙박자"
+          ]
+        }
+      }
+    ]
+  ],
+  "profiles": {
+    "legacy": {
+      "plan": null,
+      "audit": null,
+      "repair": null
+    },
+    "plan_low": {
+      "plan": "low",
+      "audit": null,
+      "repair": null
+    },
+    "audit_low": {
+      "plan": null,
+      "audit": "low",
+      "repair": null
+    },
+    "bounded": {
+      "plan": "low",
+      "audit": "low",
+      "repair": null
+    },
+    "corrective": {
+      "plan": "low",
+      "audit": "low",
+      "audit_style": "full_correction",
+      "max_calls": 2
+    }
+  },
+  "source_hashes": {
+    "src/showme/reasoning.py": "6ffba07d93cd0bcb53e38dc1d63057a5704a38924e8257526908bb30986d7ee5",
+    "src/showme/vision.py": "fb0772768d1cc39ffa850e1c9b0dc6b5c351eb9da6a3fdb65ec2fdfeeea728d7",
+    "src/showme/app.py": "93837a4fada28b047105aa80263688e791da39020adbb1a4e7dc9d0cf5e2056e",
+    "src/showme/models.py": "e37f8275a57a56d1b7f7070cb02a1cc91178d12063b96a565ce2d407362d53e3",
+    "src/showme/answer_policy.py": "665b668e6c2bffe715a0dc17bc1a2319e0e63f0bb59b5f18e21f643ac3d7a003",
+    "scripts/benchmark_reasoning.py": "b859cd35243b1eda3bcca4a74c10efa1e1f082e78a511520b11ecb0c7698da48"
+  }
+}

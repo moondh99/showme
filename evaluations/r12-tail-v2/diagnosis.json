@@ -1,0 +1,59 @@
+{
+  "source_commit": "3a51ee5",
+  "historical_slow_question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+  "passes": [
+    {
+      "model": "muse-spark-1.3",
+      "elapsed_seconds": 29.573,
+      "usage": {
+        "completion_tokens": 4959,
+        "prompt_tokens": 6503,
+        "total_tokens": 11462,
+        "completion_tokens_details": {
+          "reasoning_tokens": 4749
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "model": "muse-spark-1.3",
+      "elapsed_seconds": 17.88,
+      "usage": {
+        "completion_tokens": 2729,
+        "prompt_tokens": 3476,
+        "total_tokens": 6205,
+        "completion_tokens_details": {
+          "reasoning_tokens": 2708
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "analysis": {
+    "plan": {
+      "n": 28,
+      "elapsed_reasoning_tokens_pearson": 0.9322,
+      "prompt_token_range": [
+        6474,
+        6522
+      ],
+      "elapsed_p50": 12.136,
+      "elapsed_max": 22.392
+    },
+    "audit": {
+      "n": 23,
+      "elapsed_reasoning_tokens_pearson": 0.9683,
+      "prompt_token_range": [
+        3327,
+        3545
+      ],
+      "elapsed_p50": 8.579,
+      "elapsed_max": 19.548
+    }
+  },
+  "limits": "Historical API elapsed includes network/queue/prefill/generation; correlation is not causal isolation. No internal chain-of-thought text captured."
+}

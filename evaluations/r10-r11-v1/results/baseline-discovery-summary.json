@@ -1,0 +1,33 @@
+{
+  "cases": 12,
+  "errors": 0,
+  "model_calls": 12,
+  "checks": {
+    "intent_match": {
+      "pass": 8,
+      "scored": 12
+    },
+    "status_match": {
+      "pass": 9,
+      "scored": 12
+    },
+    "quote_coverage": {
+      "pass": 12,
+      "scored": 12
+    },
+    "decision_match": {
+      "pass": 0,
+      "scored": 7
+    },
+    "target_match": {
+      "pass": 0,
+      "scored": 7
+    },
+    "all_checks_pass": {
+      "pass": 1,
+      "scored": 12
+    }
+  },
+  "unsafe_permissions": 0,
+  "limits": "Prospectively frozen, agent authored; no independent human adjudication; same known staged image with new rule contexts. Sealed split is not to be used for selecting fixes."
+}

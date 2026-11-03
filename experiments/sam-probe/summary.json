@@ -1,0 +1,117 @@
+[
+  {
+    "case": "yellow_tray",
+    "image": "public/demo/reception-setup/03-badge-trays.png",
+    "prompt": "yellow tray",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "http_status": 200,
+    "boxes": [
+      {
+        "object_id": "0",
+        "box": [
+          851,
+          131,
+          1443,
+          830
+        ]
+      }
+    ],
+    "masks": [
+      {
+        "object_id": "0",
+        "foreground_pixels": 115753,
+        "raster_size": 413808,
+        "svg_path_length": 49342
+      }
+    ],
+    "outcome": {
+      "status": "completed"
+    },
+    "elapsed_seconds": 6.163
+  },
+  {
+    "case": "real_black_pen",
+    "image": "experiments/meta-vision/inputs/notepad.jpg",
+    "prompt": "black pen",
+    "source_size": [
+      1080,
+      1080
+    ],
+    "http_status": 200,
+    "boxes": [
+      {
+        "object_id": "0",
+        "box": [
+          551,
+          582,
+          948,
+          757
+        ]
+      }
+    ],
+    "masks": [
+      {
+        "object_id": "0",
+        "foreground_pixels": 14432,
+        "raster_size": 69475,
+        "svg_path_length": 10371
+      }
+    ],
+    "outcome": {
+      "status": "completed"
+    },
+    "elapsed_seconds": 2.278
+  },
+  {
+    "case": "no_red_scissors",
+    "image": "public/demo/reception-setup/02-signing-tools.png",
+    "prompt": "red scissors",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "http_status": 200,
+    "boxes": [],
+    "masks": [],
+    "outcome": {
+      "status": "completed"
+    },
+    "elapsed_seconds": 2.305
+  },
+  {
+    "case": "point_black_pen",
+    "image": "public/demo/reception-setup/02-signing-tools.png",
+    "prompt": "<0f>1<|point;x=1142;y=552;w=1536;h=1024|>",
+    "source_size": [
+      1536,
+      1024
+    ],
+    "http_status": 200,
+    "boxes": [
+      {
+        "object_id": "1",
+        "box": [
+          1105,
+          346,
+          1187,
+          766
+        ]
+      }
+    ],
+    "masks": [
+      {
+        "object_id": "1",
+        "foreground_pixels": 16802,
+        "raster_size": 34440,
+        "svg_path_length": 8713
+      }
+    ],
+    "outcome": {
+      "status": "completed"
+    },
+    "elapsed_seconds": 2.232
+  }
+]

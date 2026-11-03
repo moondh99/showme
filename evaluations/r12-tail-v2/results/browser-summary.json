@@ -1,0 +1,369 @@
+{
+  "questions": [
+    {
+      "question": "교육을 받았으니까 이 표로 장비를 가져가겠습니다.",
+      "intent": "procedure",
+      "answer": {
+        "status": "answered",
+        "answer": "파란 트레이의 표는 개인 물품 보관용입니다.\n\n보관표로 장비를 대여할 수 없습니다.\n\n장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다.",
+        "clarification_options": [],
+        "highlights": [],
+        "evidence": [
+          {
+            "source": "instruction",
+            "detail": "파란 트레이의 표는 개인 물품 보관용입니다."
+          },
+          {
+            "source": "instruction",
+            "detail": "보관표로 장비를 대여할 수 없습니다."
+          },
+          {
+            "source": "completion_check",
+            "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다."
+          }
+        ],
+        "approved_context": [
+          {
+            "source": "instruction",
+            "text": "파란 트레이의 표는 개인 물품 보관용입니다. 노란 트레이의 표는 공동 장비 대여용입니다. 보관표로 장비를 대여할 수 없습니다."
+          },
+          {
+            "source": "completion_check",
+            "text": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다."
+          }
+        ],
+        "assessment": {
+          "decision": "blocked",
+          "target": "파란 트레이의 보관표",
+          "conditions": [
+            {
+              "source": "instruction",
+              "detail": "파란 트레이의 표는 개인 물품 보관용입니다.",
+              "state": "met"
+            },
+            {
+              "source": "instruction",
+              "detail": "보관표로 장비를 대여할 수 없습니다.",
+              "state": "met"
+            },
+            {
+              "source": "completion_check",
+              "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다.",
+              "state": "met"
+            }
+          ]
+        }
+      },
+      "metrics": {
+        "model": "muse-spark-1.3",
+        "model_calls": 2,
+        "elapsed_seconds": 25.495,
+        "usage": {
+          "prompt_tokens": 13404,
+          "completion_tokens": 3902,
+          "total_tokens": 17306
+        },
+        "resolved_intent": "procedure",
+        "assessment": {
+          "decision": "blocked",
+          "target": "파란 트레이의 보관표",
+          "conditions": [
+            {
+              "source": "instruction",
+              "detail": "파란 트레이의 표는 개인 물품 보관용입니다.",
+              "state": "met"
+            },
+            {
+              "source": "instruction",
+              "detail": "보관표로 장비를 대여할 수 없습니다.",
+              "state": "met"
+            },
+            {
+              "source": "completion_check",
+              "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다.",
+              "state": "met"
+            }
+          ]
+        },
+        "audit_strategy": "full",
+        "review_reason": "selected_target",
+        "audit_policy": "adaptive",
+        "effort_profile": "corrective",
+        "draft_intent": "procedure",
+        "draft_decision": "blocked",
+        "audit_changed": false,
+        "passes": [
+          {
+            "model": "muse-spark-1.3",
+            "elapsed_seconds": 13.757,
+            "usage": {
+              "completion_tokens": 2049,
+              "prompt_tokens": 6503,
+              "total_tokens": 8552,
+              "completion_tokens_details": {
+                "reasoning_tokens": 1133
+              },
+              "prompt_tokens_details": {
+                "cached_tokens": 6385
+              }
+            },
+            "schema": "ShowMeSemanticPlan",
+            "reasoning_effort": "low",
+            "reasoning_tokens": 1133,
+            "visible_output_tokens": 916,
+            "timings": {
+              "prepare_seconds": 1.1e-05,
+              "http_seconds": 13.756862,
+              "decode_validate_seconds": 8.6e-05
+            }
+          },
+          {
+            "model": "muse-spark-1.3",
+            "elapsed_seconds": 11.738,
+            "usage": {
+              "completion_tokens": 1853,
+              "prompt_tokens": 6901,
+              "total_tokens": 8754,
+              "completion_tokens_details": {
+                "reasoning_tokens": 937
+              },
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "schema": "ShowMeSemanticAudit",
+            "reasoning_effort": "low",
+            "reasoning_tokens": 937,
+            "visible_output_tokens": 916,
+            "timings": {
+              "prepare_seconds": 1.1e-05,
+              "http_seconds": 11.738242,
+              "decode_validate_seconds": 9.6e-05
+            }
+          }
+        ]
+      },
+      "selection_used": true
+    },
+    {
+      "question": "교육은 안 받았지만 책임자가 같이 왔어요. 노란 건 발급 가능한 편인가요?",
+      "intent": "procedure",
+      "answer": {
+        "status": "answered",
+        "answer": "노란 트레이의 표는 공동 장비 대여용입니다.\n\n장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다.",
+        "clarification_options": [],
+        "highlights": [],
+        "evidence": [
+          {
+            "source": "instruction",
+            "detail": "노란 트레이의 표는 공동 장비 대여용입니다."
+          },
+          {
+            "source": "completion_check",
+            "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다."
+          }
+        ],
+        "approved_context": [
+          {
+            "source": "instruction",
+            "text": "파란 트레이의 표는 개인 물품 보관용입니다. 노란 트레이의 표는 공동 장비 대여용입니다. 보관표로 장비를 대여할 수 없습니다."
+          },
+          {
+            "source": "completion_check",
+            "text": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다. 어느 쪽도 확인되지 않으면 대여표를 내주지 않습니다. 보관표는 물품 인수 후에만 내줍니다."
+          }
+        ],
+        "assessment": {
+          "decision": "allowed",
+          "target": "노란 트레이의 공동 장비 대여표",
+          "conditions": [
+            {
+              "source": "completion_check",
+              "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다.",
+              "state": "met"
+            }
+          ]
+        }
+      },
+      "metrics": {
+        "model": "muse-spark-1.3",
+        "model_calls": 2,
+        "elapsed_seconds": 8.333,
+        "usage": {
+          "prompt_tokens": 13264,
+          "completion_tokens": 1603,
+          "total_tokens": 14867
+        },
+        "resolved_intent": "procedure",
+        "assessment": {
+          "decision": "allowed",
+          "target": "노란 트레이의 공동 장비 대여표",
+          "conditions": [
+            {
+              "source": "completion_check",
+              "detail": "장비 대여표는 교육 이수 또는 책임자 동행 중 하나가 확인되면 발급합니다.",
+              "state": "met"
+            }
+          ]
+        },
+        "audit_strategy": "full",
+        "review_reason": "operating_rule",
+        "audit_policy": "adaptive",
+        "effort_profile": "corrective",
+        "draft_intent": "procedure",
+        "draft_decision": "allowed",
+        "audit_changed": false,
+        "passes": [
+          {
+            "model": "muse-spark-1.3",
+            "elapsed_seconds": 5.416,
+            "usage": {
+              "completion_tokens": 1038,
+              "prompt_tokens": 6486,
+              "total_tokens": 7524,
+              "completion_tokens_details": {
+                "reasoning_tokens": 849
+              },
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "schema": "ShowMeSemanticPlan",
+            "reasoning_effort": "low",
+            "reasoning_tokens": 849,
+            "visible_output_tokens": 189,
+            "timings": {
+              "prepare_seconds": 8e-06,
+              "http_seconds": 5.416094,
+              "decode_validate_seconds": 0.000201
+            }
+          },
+          {
+            "model": "muse-spark-1.3",
+            "elapsed_seconds": 2.917,
+            "usage": {
+              "completion_tokens": 565,
+              "prompt_tokens": 6778,
+              "total_tokens": 7343,
+              "completion_tokens_details": {
+                "reasoning_tokens": 376
+              },
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "schema": "ShowMeSemanticAudit",
+            "reasoning_effort": "low",
+            "reasoning_tokens": 376,
+            "visible_output_tokens": 189,
+            "timings": {
+              "prepare_seconds": 1.6e-05,
+              "http_seconds": 2.916857,
+              "decode_validate_seconds": 0.000186
+            }
+          }
+        ]
+      },
+      "selection_used": false
+    },
+    {
+      "question": "노란 쟁반의 외형만 묘사해 줄래요?",
+      "intent": "appearance",
+      "answer": {
+        "status": "answered",
+        "answer": "사진 오른쪽에 놓인 노란색 직사각형 쟁반입니다.",
+        "clarification_options": [],
+        "highlights": [
+          {
+            "label": "노란 쟁반",
+            "box": [
+              532,
+              124,
+              907,
+              869
+            ],
+            "origin": "model"
+          }
+        ],
+        "evidence": [
+          {
+            "source": "photo",
+            "detail": "사진 오른쪽에 노란색 직사각형 트레이가 놓여 있음"
+          }
+        ],
+        "approved_context": [],
+        "assessment": {
+          "decision": "visual",
+          "target": "노란 쟁반",
+          "conditions": []
+        }
+      },
+      "metrics": {
+        "model": "muse-spark-1.3",
+        "model_calls": 1,
+        "elapsed_seconds": 6.592,
+        "usage": {
+          "prompt_tokens": 6478,
+          "completion_tokens": 695,
+          "total_tokens": 7173
+        },
+        "resolved_intent": "appearance",
+        "assessment": {
+          "decision": "visual",
+          "target": "노란 쟁반",
+          "conditions": []
+        },
+        "audit_strategy": "plain_visual",
+        "review_reason": "plain_visual",
+        "audit_policy": "adaptive",
+        "effort_profile": "corrective",
+        "draft_intent": "appearance",
+        "draft_decision": "visual",
+        "audit_changed": false,
+        "passes": [
+          {
+            "model": "muse-spark-1.3",
+            "elapsed_seconds": 6.592,
+            "usage": {
+              "completion_tokens": 695,
+              "prompt_tokens": 6478,
+              "total_tokens": 7173,
+              "completion_tokens_details": {
+                "reasoning_tokens": 556
+              },
+              "prompt_tokens_details": {
+                "cached_tokens": 0
+              }
+            },
+            "schema": "ShowMeSemanticPlan",
+            "reasoning_effort": "low",
+            "reasoning_tokens": 556,
+            "visible_output_tokens": 139,
+            "timings": {
+              "prepare_seconds": 5e-06,
+              "http_seconds": 6.591688,
+              "decode_validate_seconds": 0.000221
+            }
+          }
+        ]
+      },
+      "selection_used": false
+    }
+  ],
+  "sam": {
+    "point": {
+      "x": 240,
+      "y": 641
+    },
+    "box": [
+      139,
+      529,
+      344,
+      735
+    ],
+    "seconds": 2.384
+  },
+  "approved_snapshots_unchanged": 7,
+  "console_errors": [],
+  "timing_scope": "Model request elapsed sums, excludes SAM/browser network/render. Browser click-to-render measurement unavailable because locator deadline was shorter than request; no request was resent."
+}

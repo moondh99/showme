@@ -1,0 +1,109 @@
+{
+  "full": {
+    "cases": 1,
+    "errors": 0,
+    "model_calls": 2,
+    "p50_seconds": 30.719,
+    "p95_seconds": 30.719,
+    "mean_seconds": 30.719,
+    "checks": {
+      "intent_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "status_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "decision_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "target_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "quote_coverage": {
+        "pass": 1,
+        "scored": 1
+      },
+      "all_checks_pass": {
+        "pass": 1,
+        "scored": 1
+      }
+    },
+    "unsafe_permissions": 0,
+    "strategies": {
+      "full": 1,
+      "compact": 0,
+      "compact_repair": 0,
+      "plain_visual": 0
+    },
+    "tokens": {
+      "prompt_tokens": 13310,
+      "completion_tokens": 4360,
+      "total_tokens": 17670
+    }
+  },
+  "adaptive": {
+    "cases": 1,
+    "errors": 0,
+    "model_calls": 2,
+    "p50_seconds": 18.894,
+    "p95_seconds": 18.894,
+    "mean_seconds": 18.894,
+    "checks": {
+      "intent_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "status_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "decision_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "target_match": {
+        "pass": 1,
+        "scored": 1
+      },
+      "quote_coverage": {
+        "pass": 1,
+        "scored": 1
+      },
+      "all_checks_pass": {
+        "pass": 1,
+        "scored": 1
+      }
+    },
+    "unsafe_permissions": 0,
+    "strategies": {
+      "full": 0,
+      "compact": 1,
+      "compact_repair": 0,
+      "plain_visual": 0
+    },
+    "tokens": {
+      "prompt_tokens": 9877,
+      "completion_tokens": 2959,
+      "total_tokens": 12836
+    }
+  },
+  "paired": {
+    "pairs": 1,
+    "adaptive_faster": 1,
+    "median_saved_seconds": 11.825,
+    "details": [
+      {
+        "id": "V03",
+        "full_seconds": 30.719,
+        "adaptive_seconds": 18.894,
+        "saved_seconds": 11.825
+      }
+    ]
+  },
+  "call_reduction_percent": 0.0,
+  "p50_reduction_percent": 38.49
+}

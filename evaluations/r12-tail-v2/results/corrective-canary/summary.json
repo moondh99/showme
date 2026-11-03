@@ -1,0 +1,186 @@
+{
+  "all": {
+    "corrective": {
+      "cases": 3,
+      "errors": 0,
+      "p50_seconds": 12.312,
+      "p95_seconds": 13.892,
+      "max_seconds": 13.892,
+      "model_calls": 6,
+      "checks": {
+        "intent_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "status_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "target_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "decision_match": {
+          "pass": 3,
+          "scored": 3
+        },
+        "quote_coverage": {
+          "pass": 3,
+          "scored": 3
+        },
+        "all_checks_pass": {
+          "pass": 3,
+          "scored": 3
+        }
+      },
+      "unsafe_permissions": 0,
+      "http_wait_seconds": 35.435,
+      "local_pipeline_seconds": 0.023715,
+      "repairs": 0,
+      "total_tokens": 45733,
+      "phases": {
+        "plan": {
+          "count": 3,
+          "p50_seconds": 7.122,
+          "p95_seconds": 7.835,
+          "reasoning_tokens": 2297,
+          "visible_tokens": 1050,
+          "http_seconds": 20.347,
+          "local_seconds": 0.001865
+        },
+        "audit": {
+          "count": 3,
+          "p50_seconds": 4.469,
+          "p95_seconds": 6.763,
+          "reasoning_tokens": 1754,
+          "visible_tokens": 660,
+          "http_seconds": 15.088,
+          "local_seconds": 0.000593
+        }
+      }
+    }
+  },
+  "fixed_suite": {
+    "corrective": {
+      "cases": 2,
+      "errors": 0,
+      "p50_seconds": 10.784,
+      "p95_seconds": 12.312,
+      "max_seconds": 12.312,
+      "model_calls": 4,
+      "checks": {
+        "intent_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "status_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "target_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "decision_match": {
+          "pass": 2,
+          "scored": 2
+        },
+        "quote_coverage": {
+          "pass": 2,
+          "scored": 2
+        },
+        "all_checks_pass": {
+          "pass": 2,
+          "scored": 2
+        }
+      },
+      "unsafe_permissions": 0,
+      "http_wait_seconds": 21.552,
+      "local_pipeline_seconds": 0.014835,
+      "repairs": 0,
+      "total_tokens": 29842,
+      "phases": {
+        "plan": {
+          "count": 2,
+          "p50_seconds": 6.614,
+          "p95_seconds": 7.835,
+          "reasoning_tokens": 1099,
+          "visible_tokens": 804,
+          "http_seconds": 13.227,
+          "local_seconds": 0.00032
+        },
+        "audit": {
+          "count": 2,
+          "p50_seconds": 4.163,
+          "p95_seconds": 4.469,
+          "reasoning_tokens": 876,
+          "visible_tokens": 446,
+          "http_seconds": 8.325,
+          "local_seconds": 0.000476
+        }
+      }
+    }
+  },
+  "selected_repetitions": {
+    "corrective": {
+      "cases": 1,
+      "errors": 0,
+      "p50_seconds": 13.892,
+      "p95_seconds": 13.892,
+      "max_seconds": 13.892,
+      "model_calls": 2,
+      "checks": {
+        "intent_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "status_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "target_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "decision_match": {
+          "pass": 1,
+          "scored": 1
+        },
+        "quote_coverage": {
+          "pass": 1,
+          "scored": 1
+        },
+        "all_checks_pass": {
+          "pass": 1,
+          "scored": 1
+        }
+      },
+      "unsafe_permissions": 0,
+      "http_wait_seconds": 13.883,
+      "local_pipeline_seconds": 0.00888,
+      "repairs": 0,
+      "total_tokens": 15891,
+      "phases": {
+        "plan": {
+          "count": 1,
+          "p50_seconds": 7.122,
+          "p95_seconds": 7.122,
+          "reasoning_tokens": 1198,
+          "visible_tokens": 246,
+          "http_seconds": 7.121,
+          "local_seconds": 0.001545
+        },
+        "audit": {
+          "count": 1,
+          "p50_seconds": 6.763,
+          "p95_seconds": 6.763,
+          "reasoning_tokens": 878,
+          "visible_tokens": 214,
+          "http_seconds": 6.763,
+          "local_seconds": 0.000117
+        }
+      }
+    }
+  },
+  "paired_details": []
+}
