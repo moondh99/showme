@@ -14,7 +14,9 @@ from showme.store import Store
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-dir", type=Path, default=ROOT / "state")
-    parser.add_argument("--scenario", choices=DEMO_SCENARIOS, default="reception")
+    parser.add_argument("--scenario", choices=DEMO_SCENARIOS)
     args = parser.parse_args()
-    url = seed_demo(Store(args.data_dir), ROOT / "public/demo/reception-setup", scenario=args.scenario)
-    print("데모 준비 완료 (AI 연출 사진, API 호출 없음): " + url)
+    store = Store(args.data_dir)
+    for scenario in ((args.scenario,) if args.scenario else ("storage-tags", "storage-tags-en")):
+        url = seed_demo(store, ROOT / "public/demo/reception-setup", scenario=scenario)
+        print(f"{scenario} demo ready (staged photo, no API calls): {url}")

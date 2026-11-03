@@ -1,0 +1,14 @@
+{
+  "title": "Equipment rental and personal storage",
+  "goal": "Tell apart two similar tags and apply the right issuance rules. The photo is an AI-staged demonstration.",
+  "steps": [
+    {
+      "file": "03-badge-trays.png",
+      "title": "Personal storage tags and equipment rental tags",
+      "note": "Distinguish the approved rules for the blue-tray storage tags and the yellow-tray equipment rental tags.",
+      "instruction": "The tags in the blue tray are for personal storage. The tags in the yellow tray are for shared equipment rental. Storage tags cannot be used to borrow equipment.",
+      "completion_check": "Issue an equipment rental tag if either completed training or supervisor accompaniment is confirmed. If neither is confirmed, do not issue a rental tag. Issue a storage tag only after receiving the personal item.",
+      "approved_highlights": []
+    }
+  ]
+}

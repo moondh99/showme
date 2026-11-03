@@ -39,5 +39,6 @@ def create_hosted_app():
     app = create_app(data_dir=settings["directory"])
     if os.getenv("SHOWME_SEED_DEMO", "1") == "1":
         from .demo import seed_demo
-        seed_demo(app.state.store, ROOT / "public/demo/reception-setup")
+        for scenario in ("storage-tags", "storage-tags-en"):
+            seed_demo(app.state.store, ROOT / "public/demo/reception-setup", scenario=scenario)
     return app

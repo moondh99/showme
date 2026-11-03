@@ -39,6 +39,7 @@ class Step(StrictModel):
 class CreateGuide(StrictModel):
     title: Annotated[str, Field(min_length=1, max_length=120)]
     goal: str = Field(default="", max_length=1000)
+    language: Literal["en", "ko"] = "ko"
 
 
 class SaveGuide(CreateGuide):

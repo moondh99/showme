@@ -76,11 +76,12 @@ def invalid_model_response(stage, schema_name, error=None, reason=None, message=
                        "AI 응답 형식을 확인하지 못했습니다. 기존 내용은 유지됩니다.", diagnostic)
 
 
-def generate_step(photo, data, title, goal, note):
+def generate_step(photo, data, title, goal, note, *, language="ko"):
     content = [{"type": "text", "text": json.dumps({"photo_id": photo["id"],
         "guide_title": title, "goal": goal, "operator_note": note}, ensure_ascii=False)},
         {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(data).decode()}}]
-    result, metrics = request_structured(PROMPT, content, GeneratedStep, "ShowMeStepDraft")
+    prompt = PROMPT.replace("short Korean", "short English") if language == "en" else PROMPT
+    result, metrics = request_structured(prompt, content, GeneratedStep, "ShowMeStepDraft")
     if result.photo_id != photo["id"] or any(h.origin != "model" for h in result.highlights):
         raise VisionError("invalid_response", "사진 연결과 AI 응답을 확인하지 못했습니다. 기존 내용은 유지됩니다.")
     return result.model_dump(), metrics
@@ -179,7 +180,13 @@ def validate_answer(value, step, selection=None, intent="procedure"):
             result.clarification_options = []
             result.highlights = []
     # Unsupported answers cannot sneak an assertion into their free-text answer.
-    if result.status == "insufficient_information":
+    if step.get("language") == "en" and result.status == "insufficient_information":
+        result.answer = ("The photo does not show enough to answer. Check the approved instructions for work rules."
+                         if intent == "appearance" else
+                         "The current photo and approved instructions do not answer this question. Check with your supervisor.")
+    elif step.get("language") == "en" and result.status == "not_visible":
+        result.answer = "I could not identify the object in this photo. Describe its name or location."
+    elif result.status == "insufficient_information":
         result.answer = ("사진에 보이는 내용만으로는 답하기 어렵습니다. 작업 규칙은 승인된 설명에서 다시 확인해 주세요."
                          if intent == "appearance" else
                          "모르겠습니다. 현재 단계의 사진과 승인된 설명에는 이 질문에 답할 근거가 없습니다. 담당자에게 확인해 주세요.")

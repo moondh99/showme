@@ -161,8 +161,10 @@ def answer_with_reasoning(data,step,question,history,selection=None,intent='proc
     if effort_profile not in profiles:raise ValueError('Unknown reasoning effort profile')
     plan_effort,audit_effort=profiles[effort_profile]
     schema=plan_schema(intent);passes=[]
+    def localized(prompt):
+        return prompt.replace("concise Korean", "concise English") if step.get("language")=="en" else prompt
     try:
-        plan,metrics=request_structured(PLAN_PROMPT,_content(data,step,question,history,selection,intent),
+        plan,metrics=request_structured(localized(PLAN_PROMPT),_content(data,step,question,history,selection,intent),
                                        PlannedAnswer,'ShowMeSemanticPlan',wire_schema=schema,response_key='result',reasoning_effort=plan_effort)
     except VisionError as exc:
         exc.diagnostics=dict(exc.diagnostics or {},model_calls=1)
@@ -173,10 +175,10 @@ def answer_with_reasoning(data,step,question,history,selection=None,intent='proc
     if strategy in ('full','compact'):
         try:
             if strategy=='full':
-                plan,metrics=request_structured(AUDIT_PROMPT,_content(data,step,question,history,selection,intent,draft),
+                plan,metrics=request_structured(localized(AUDIT_PROMPT),_content(data,step,question,history,selection,intent,draft),
                                                PlannedAnswer,'ShowMeSemanticAudit',wire_schema=schema,response_key='result',reasoning_effort=audit_effort)
             else:
-                audit,metrics=request_structured(COMPACT_AUDIT_PROMPT,_content(data,step,question,history,selection,intent,draft),
+                audit,metrics=request_structured(localized(COMPACT_AUDIT_PROMPT),_content(data,step,question,history,selection,intent,draft),
                                                 AuditDecision,'ShowMeCompactAudit',wire_schema=compact_audit_schema(intent),response_key='result',reasoning_effort=audit_effort)
         except VisionError as exc:
             exc.diagnostics=dict(exc.diagnostics or {},model_calls=2)
@@ -184,7 +186,7 @@ def answer_with_reasoning(data,step,question,history,selection=None,intent='proc
         passes.append(metrics)
         if strategy=='compact' and audit.verdict=='repair':
             try:
-                plan,metrics=request_structured(AUDIT_PROMPT,_content(data,step,question,history,selection,intent,draft),
+                plan,metrics=request_structured(localized(AUDIT_PROMPT),_content(data,step,question,history,selection,intent,draft),
                                                PlannedAnswer,'ShowMeSemanticRepair',wire_schema=schema,response_key='result',reasoning_effort=None)
             except VisionError as exc:
                 exc.diagnostics=dict(exc.diagnostics or {},model_calls=3)

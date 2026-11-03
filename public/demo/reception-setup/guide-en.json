@@ -1,0 +1,163 @@
+{
+  "title": "Event check-in setup for new staff",
+  "goal": "Set up the check-in sign, signing supplies and badges. These are AI-staged demonstration photos.",
+  "image_origin": "AI-generated staged demonstration, not real event photographs",
+  "steps": [
+    {
+      "file": "01-sign.png",
+      "title": "Set up the check-in sign",
+      "note": "Place the CHECK-IN sign on the left side of the desk. Face it toward arriving attendees so they can find check-in.",
+      "instruction": "Place the CHECK-IN sign on the left side of the desk with the lettering facing attendees.",
+      "completion_check": "The sign stands on the left side of the desk and CHECK-IN is visible.",
+      "approved_highlights": [
+        {
+          "label": "CHECK-IN sign",
+          "box": [
+            158,
+            109,
+            562,
+            781
+          ],
+          "origin": "author"
+        }
+      ]
+    },
+    {
+      "file": "02-signing-tools.png",
+      "title": "Separate the signing and staff pens",
+      "note": "Place the black and blue pens to the right of the gray clipboard. Attendees sign with the black pen. The blue pen is for staff notes only.",
+      "instruction": "Place both pens to the right of the gray clipboard. Give attendees the black pen for signatures. Use the blue pen only for staff notes.",
+      "completion_check": "Both pens are visible and clearly separated to the right of the clipboard.",
+      "approved_highlights": [
+        {
+          "label": "Gray clipboard",
+          "box": [
+            131,
+            108,
+            703,
+            898
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "Black pen",
+          "box": [
+            715,
+            332,
+            773,
+            754
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "Blue pen",
+          "box": [
+            797,
+            353,
+            847,
+            790
+          ],
+          "origin": "author"
+        }
+      ]
+    },
+    {
+      "file": "03-badge-trays.png",
+      "title": "Separate pre-registered and walk-in badges",
+      "note": "Put pre-registered badges in the blue tray on the left and walk-in badges in the yellow tray on the right. Leave a gap between the trays.",
+      "instruction": "Place pre-registered badges in the left blue tray and walk-in badges in the right yellow tray. Leave space between the trays.",
+      "completion_check": "The trays are visibly separate and the badges are inside their assigned trays.",
+      "approved_highlights": [
+        {
+          "label": "Pre-registered badges",
+          "box": [
+            46,
+            124,
+            446,
+            809
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "Walk-in badges",
+          "box": [
+            552,
+            125,
+            943,
+            824
+          ],
+          "origin": "author"
+        }
+      ]
+    },
+    {
+      "file": "04-overview.png",
+      "title": "Check the full check-in desk",
+      "note": "Check the sign on the left, both trays in the center, and the clipboard and pens on the right. Keep space clear in front of the left side of the desk.",
+      "instruction": "Check the sign, badge trays, clipboard, and both pens. Leave the front left of the desk clear for attendees and mark the step complete after checking.",
+      "completion_check": "All five items are visible and the front left of the desk is clear.",
+      "approved_highlights": [
+        {
+          "label": "Check-in sign",
+          "box": [
+            90,
+            92,
+            252,
+            346
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "Blue badge tray",
+          "box": [
+            225,
+            296,
+            455,
+            578
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "Yellow badge tray",
+          "box": [
+            468,
+            328,
+            675,
+            632
+          ],
+          "origin": "author"
+        },
+        {
+          "label": "Signing clipboard",
+          "box": [
+            686,
+            439,
+            897,
+            763
+          ],
+          "origin": "author"
+        }
+      ]
+    }
+  ],
+  "demo_questions": [
+    {
+      "step": 3,
+      "question": "현장등록 참가자용 명찰은 어느 트레이에 있나요?",
+      "expected": "answered",
+      "must_show": "노란 트레이와 승인된 설명 근거"
+    },
+    {
+      "step": 2,
+      "question": "이 펜은 어디에 있나요?",
+      "expected": "needs_clarification",
+      "followup": "검은 펜이요.",
+      "followup_expected": "answered"
+    },
+    {
+      "step": 2,
+      "question": "행사 시작 시간은 몇 시인가요?",
+      "expected": "insufficient_information"
+    }
+  ]
+}

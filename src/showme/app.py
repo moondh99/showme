@@ -9,6 +9,7 @@ import secrets
 import threading
 import time
 from urllib.parse import urlsplit
+from typing import Literal
 from uuid import uuid4
 import warnings
 
@@ -23,7 +24,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from .images import prepare_image
 from .models import AskQuestion, CreateGuide, Login, ResolveGap, SaveGuide, SelectObject, Step, Version
 from .answer_policy import approved_context, operational_question, question_intent
-from .demo import staged_photo_hashes
+from .demo import DEMO_SCENARIOS, demo_pointer, staged_photo_hashes
 from .segmentation import segment_object, validate_selection
 from .store import Store
 from .vision import VisionError, generate_step, validate_answer, invalid_model_response
@@ -150,22 +151,24 @@ def create_app(data_dir=None, author_password=None, generator=None, answerer=Non
         return {"status": "ok"}
 
     @app.get("/api/demo")
-    def demo_link():
-        path = store.directory / "demo-share-id.txt"
-        if not path.exists():
-            return {"url": None}
-        share_id = path.read_text().strip()
-        try:
-            store.revision(share_id)
-        except HTTPException:
-            return {"url": None}
-        return {"url": "/learn/" + share_id}
+    def demo_link(lang: Literal["en", "ko"] | None = None):
+        for language in ((lang,) if lang else ("en", "ko")):
+            path = store.directory / demo_pointer(language)
+            if not path.exists():
+                continue
+            share_id = path.read_text().strip()
+            try:
+                store.revision(share_id)
+            except HTTPException:
+                continue
+            return {"url": "/learn/" + share_id}
+        return {"url": None}
 
     @app.get("/demo")
-    def demo_page():
-        url = demo_link()["url"]
+    def demo_page(lang: Literal["en", "ko"] | None = None):
+        url = demo_link(lang)["url"]
         if not url:
-            raise HTTPException(404, "시연 안내서가 아직 준비되지 않았습니다.")
+            raise HTTPException(404, "시연 안내서가 아직 준비되지 않았습니다." if lang == "ko" else "The demo has not been prepared yet.")
         return RedirectResponse(url)
 
     @app.get("/api/session")
@@ -226,7 +229,7 @@ def create_app(data_dir=None, author_password=None, generator=None, answerer=Non
     def create_guide(payload: CreateGuide):
         guide_id = uuid4().hex
         document = {"id": guide_id, "title": payload.title, "goal": payload.goal,
-                    "version": 1, "steps": [], "updated_at": time.time()}
+                    "version": 1, "steps": [], "updated_at": time.time(), "language": payload.language}
         with store.connect() as db:
             db.execute("INSERT INTO guides VALUES(?,?,?)", (guide_id, 1, json.dumps(document, ensure_ascii=False)))
         return document
@@ -279,8 +282,9 @@ def create_app(data_dir=None, author_password=None, generator=None, answerer=Non
             busy.add(guide_id)
         try:
             reserve_budget()
+            options = {"language": draft.get("language", "ko")} if generator is generate_step else {}
             generated, metrics = generator(photo, (store.photos / (photo["id"] + ".jpg")).read_bytes(),
-                                           draft["title"], draft["goal"], step["operator_note"])
+                                           draft["title"], draft["goal"], step["operator_note"], **options)
             from .models import GeneratedStep
             try:
                 generated = GeneratedStep.model_validate(generated).model_dump()
@@ -318,7 +322,8 @@ def create_app(data_dir=None, author_password=None, generator=None, answerer=Non
                           "photo_width": metadata["width"], "photo_height": metadata["height"]})
         result = {"title": snapshot["title"], "goal": snapshot["goal"],
                 "revision_number": snapshot["revision_number"], "approved_at": snapshot["approved_at"],
-                "share_id": share_id, "steps": steps}
+                "share_id": share_id, "steps": steps, "language": snapshot.get("language", "ko"),
+                  "demo": any(snapshot["id"] == guide_id for guide_id, _ in DEMO_SCENARIOS.values())}
         if len(steps) == 1:
             result["step"] = steps[0]  # Original published URLs/API consumers remain readable.
         return result
@@ -346,6 +351,8 @@ def create_app(data_dir=None, author_password=None, generator=None, answerer=Non
             recheck_of = store.clarification_recheck(payload.clarification_of)
         # Keep private notes and generation metadata out of the answering interface.
         step = {k: approved[k] for k in ("id", "title", "instruction", "completion_check", "highlights")}
+        if snapshot.get("language") == "en":
+            step["language"] = "en"
         slot = acquire_learner_slot(request, share_id, payload.step_id)
         try:
             data = (store.photos / (approved["photo_id"] + ".jpg")).read_bytes()

@@ -147,5 +147,39 @@ class ImprovementApiTests(unittest.TestCase):
         self.assertEqual(self.client.get('/demo', follow_redirects=False).headers['location'], storage_tags)
 
 
+    def test_english_demo_is_default_and_korean_link_stays_valid(self):
+        assets = Path(__file__).resolve().parents[1] / 'public/demo/reception-setup'
+        store = self.app.state.store
+        korean = seed_demo(store, assets, scenario='storage-tags')
+        before = self.client.get('/api' + korean).json()
+        english = seed_demo(store, assets, scenario='storage-tags-en')
+
+        self.assertEqual(self.client.get('/demo', follow_redirects=False).headers['location'], english)
+        self.assertEqual(self.client.get('/demo?lang=ko', follow_redirects=False).headers['location'], korean)
+        self.assertEqual(self.client.get('/api' + korean).json(), before)
+        guide = self.client.get('/api' + english).json()
+        self.assertEqual(guide['language'], 'en')
+        self.assertEqual(before['language'], 'ko')
+        self.assertEqual(guide['step']['photo_id'], before['step']['photo_id'])
+        self.assertIn('Storage tags cannot be used to borrow equipment.', guide['step']['instruction'])
+
+    def test_english_demo_sends_approved_locale_to_the_answerer(self):
+        assets = Path(__file__).resolve().parents[1] / 'public/demo/reception-setup'
+        english = seed_demo(self.app.state.store, assets, scenario='storage-tags-en')
+        expected = self.client.get('/api' + english).json()['step']
+        def answerer(data, step, question, history, selection=None, *, intent):
+            self.assertEqual(step['language'], 'en')
+            self.assertEqual(step['instruction'], expected['instruction'])
+            return {'status':'answered','answer':'Storage policy.','highlights':[],
+                    'clarification_options':[],'evidence':[{'source':'instruction','detail':'Storage tags cannot be used to borrow equipment.'}]}, {}
+        app = create_app(self.temp.name, author_password='test-password', answerer=answerer)
+        with TestClient(app) as client:
+            response = client.post('/api' + english + '/questions',
+                                   json={'step_id':expected['id'],'question':'May I borrow equipment?'})
+        self.assertEqual(response.status_code, 200, response.text)
+        self.assertEqual(response.json()['answer'], 'Storage tags cannot be used to borrow equipment.')
+        self.assertEqual(response.json()['approved_context'][0]['text'], expected['instruction'])
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -12,6 +12,8 @@ from .models import Step
 DEMO_SCENARIOS = {
     "reception": ("showme-reception-demo-v1", "guide.json"),
     "storage-tags": ("showme-storage-tags-demo-v1", "storage-tags.json"),
+    "storage-tags-en": ("showme-storage-tags-demo-en-v1", "storage-tags-en.json"),
+    "reception-en": ("showme-reception-demo-en-v1", "guide-en.json"),
 }
 
 
@@ -24,8 +26,13 @@ def staged_photo_hashes(asset_dir):
                      for step in guide["steps"])
 
 
+def demo_pointer(language):
+    return "demo-share-id-en.txt" if language == "en" else "demo-share-id.txt"
+
+
 def seed_demo(store, asset_dir, *, scenario="reception"):
     guide_id, guide_file = DEMO_SCENARIOS[scenario]
+    language = "en" if scenario.endswith("-en") else "ko"
     asset_dir = Path(asset_dir)
     source = json.loads((asset_dir / guide_file).read_text())
     with store.connect() as db:
@@ -48,7 +55,7 @@ def seed_demo(store, asset_dir, *, scenario="reception"):
                               completion_check=item["completion_check"], highlights=item["approved_highlights"],
                               reviewed=True).model_dump())
         document = {"id": guide_id, "version": 1, "title": source["title"], "goal": source["goal"],
-                    "steps": steps, "updated_at": time.time()}
+                    "steps": steps, "updated_at": time.time(), "language": language}
         for photo_id, metadata, canonical in photos:
             path = store.photos / (photo_id + ".jpg")
             if path.exists():
@@ -61,5 +68,5 @@ def seed_demo(store, asset_dir, *, scenario="reception"):
                 db.execute("INSERT OR IGNORE INTO photos VALUES(?,?)", (photo_id, json.dumps(metadata, ensure_ascii=False)))
             db.execute("INSERT OR IGNORE INTO guides VALUES(?,?,?)", (guide_id, 1, json.dumps(document, ensure_ascii=False)))
         share_id = store.publish(guide_id, 1)["share_id"]
-    (store.directory / "demo-share-id.txt").write_text(share_id + "\n")
+    (store.directory / demo_pointer(language)).write_text(share_id + "\n")
     return "/learn/" + share_id

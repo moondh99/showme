@@ -187,3 +187,19 @@ ShowMe는 담당자가 승인한 사진 안내서를 처음 맡은 사람이 따
 [유보 화면](assets/storage-tags-docker-conditional-fixed.png) · [허용 화면](assets/storage-tags-docker-allowed-fixed.png) · [금지 화면](assets/storage-tags-docker-blocked-fixed.png)
 
 세 응답의 화면과 서버에 저장된 승인 설명·완료 확인을 데모 데이터와 대조했다. 모두 원문과 일치했고, 같은 탭에서 새로고침해도 세 판정과 라벨이 유지됐다. 실제 SAM 2회, Muse 6회를 사용했으며 재시도는 없었다. 위 시간은 각 질문에 쓰인 Muse 두 호출의 합이다. 검증 범위는 같은 연출 사진의 세 질문이며, 원본 기록은 `state/evidence/docker-verdict-label/`에 있다.
+
+## 2026-11-03 · English demo verification
+
+The default demo and author workspace open in English. The Korean switch opens a separately approved Korean guide. Existing Korean share IDs retain their original snapshots. Model instructions for both the initial answer and its review use the approved guide's language. Each returned citation is checked against the matching snapshot.
+
+The live recording used SAM 3.1 to select each tag on the same staged photograph, then Muse Spark 1.3 to answer three separate questions. All five learner requests returned HTTP 200 on the first attempt. Waits are measured in the browser from the request to the rendered result.
+
+| Case | Result on screen | Approved English rule verified | Wait |
+| --- | --- | --- | ---: |
+| Blue storage tag, completed training | **Do not proceed. Storage tags cannot be used to borrow equipment.** The yellow tag's requirements appear separately. | “Storage tags cannot be used to borrow equipment.” | 18.0 s |
+| Yellow rental tag, supervisor present and training incomplete | **Allowed in the scenario described.** | “Issue an equipment rental tag if either completed training or supervisor accompaniment is confirmed.” | 15.6 s |
+| Yellow rental tag, requirements unspecified | **Confirm the required conditions.** Requirements are marked for confirmation. | “If neither is confirmed, do not issue a rental tag.” | 27.1 s |
+
+For each answer, the evidence and condition quotes were exact substrings of the English approval. The response and browser displayed the same complete approved instruction and completion check. The blocking label appeared only in the blocked case. A separate author recording generated a draft in English, published it, edited the draft, and verified that the original approval still returned the same content.
+
+The local tests passed with 118 Python tests and 21 JavaScript tests. Browser checks covered language switching and widths of 320 and 390 px. The live verification covers one staged photo and three question variants on a local server. [Actual English verdict](assets/storage-tags-en-verdict.png) · [English demo recording](https://moondh99.github.io/showme/)

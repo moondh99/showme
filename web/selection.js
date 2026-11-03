@@ -9,9 +9,9 @@ export function selectionOverlay(selection,cursor,escape){
   if(cursor)result+=`<span class="pick-point" aria-hidden="true" style="left:${cursor.x/10}%;top:${cursor.y/10}%"></span>`;
   return result;
 }
-export function bindPointPicker(frame,image,{active,cursor,onMove,onCommit,onCancel}){
+export function bindPointPicker(frame,image,{active,cursor,onMove,onCommit,onCancel,label='물체의 가운데를 선택하세요. 방향키로 이동하고 Enter로 선택할 수 있습니다.'}){
   if(!active)return;
-  frame.classList.add('point-selecting');frame.tabIndex=0;frame.setAttribute('role','button');frame.setAttribute('aria-label','물체의 가운데를 선택하세요. 방향키로 이동하고 Enter로 선택할 수 있습니다.');frame.setAttribute('aria-describedby','selection-help');
+  frame.classList.add('point-selecting');frame.tabIndex=0;frame.setAttribute('role','button');frame.setAttribute('aria-label',label);frame.setAttribute('aria-describedby','selection-help');
   let point={...cursor};
   frame.onclick=event=>{const next=normalizedPoint(event.clientX,event.clientY,image.getBoundingClientRect());if(next)onCommit(next);};
   frame.onkeydown=event=>{
