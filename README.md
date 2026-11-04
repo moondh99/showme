@@ -38,7 +38,11 @@ Read **Decision and full approved text** under each verdict to check the rule in
 - **Muse Spark 1.3** drafts guide steps from author notes and connects learner questions to the selected object and the applicable rule. Rule questions receive a separate model review.
 - **ShowMe** verifies each quote against the published instruction or completion criteria. The learner marks work complete.
 
+## Verification
+
 The English demo was recorded in the running app with live Meta models. The recording starts with the blocked blue tag, then shows the allowed and unresolved yellow tag cases. Captions identify shortened model waits and show the original duration. The [verification record](docs/PRODUCT_DECISIONS.md#2026-11-03--english-demo-verification) covers three questions on one [staged photo](public/demo/reception-setup/photo-sources.json).
+
+In a small AI benchmark using two newly staged photos, ShowMe and a single-call Muse Spark baseline both returned the correct decision and cited the applicable approved rule on all four tasks. Mean processing times were 23.58 seconds for ShowMe, including SAM object selection, and 5.57 seconds for the baseline, which received the photo and approved text directly. The benchmark measured system processing time. It did not measure how long people took to find the rule.
 
 ## Tests
 
